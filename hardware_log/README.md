@@ -4,13 +4,13 @@
 <tr>
 <td width="50%" valign="top">
 
-Our robotic platform is purpose-built for long-term deployment in real outdoor farmland environments.
+Our robotic platform is purpose-built for long-term deployment in **real outdoor farmland** environments.
 
-It is engineered to withstand prolonged sun exposure, fluctuating weather, and uneven terrain, enabling stable integration of multiple sensors under field conditions.
+It is engineered to withstand **prolonged sun exposure**, **fluctuating weather**, and **uneven terrain**, enabling stable integration of multiple sensors under field conditions.
 
-The system operated reliably for 4 consecutive weeks in summer field trials, performing four data collection sessions per day under temperatures exceeding 100°F.
+The system operated reliably for **4** consecutive weeks in summer field trials, performing **4** data collection sessions per day under temperatures exceeding **100°F**.
 
-This validated its durability, thermal stability, and sensing reliability for continuous RGB-D and LiDAR data acquisition under dynamic outdoor conditions.
+This validated its **durability**, **thermal stability**, and **sensing reliability** for continuous RGB-D and LiDAR data acquisition under **dynamic outdoor conditions**.
 
 </td>
 <td width="50%">
@@ -29,7 +29,7 @@ This validated its durability, thermal stability, and sensing reliability for co
 | File | Description |
 |------|-------------|
 | [`01_Power.md`](./01_Power.md) | Power supply and conversion system — including DC step-down and step-up regulators |
-| [`02_Sensing.md`](./02_Sensing.md) | Camera systems (ZED X stereo setup, OBSBOT), IMU, and sensor synchronization |
+| [`02_Sensing.md`](./02_Sensing.md) | Camera systems (ZED X stereo setup, OBSBOT), Livox Mid-360 LiDAR, and sensor synchronization |
 | [`03_Compute.md`](./03_Compute.md) | Edge compute unit setup (Jetson AGX Orin), storage configuration, and thermal considerations |
 | [`04_Robots.md`](./04_Robots.md) | Base platform (AgileX Scout 2.0), frame design, passive cooling, and 3D-printed integration |
 | [`05_Network.md`](./05_Network.md) | Network configuration for remote control, video streaming, and system monitoring |
@@ -38,7 +38,7 @@ This validated its durability, thermal stability, and sensing reliability for co
 
 ## 📌 Project Goal
 
-To enable **real-time, high-resolution 3D reconstruction** and **crop-aware autonomous navigation** in outdoor farm settings using a compact, modular, and fully field-deployable robot.
+To enable **long-term**, **high-frequency collection of RGB-D and LiDAR data** under dynamic outdoor conditions for **3D reconstruction** and **crop growth analysis** in real farmland environments.
 
 ---
 
