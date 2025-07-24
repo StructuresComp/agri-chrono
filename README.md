@@ -1,15 +1,18 @@
 # AgriChrono: A Multi-modal Dataset Capturing Crop Growth and Illumination Variability via a Field Robot Platform
 
-## 1. Overview
+## 1. Project Overview
 
 <table>
 <tr>
 <td width="65%" valign="top">
 
-- **Project Duration**: July 2–31, 2025  
-- **Location**: NDSU Experimental Field  
-- **Objective**: Capture time-aligned RGB-D + LiDAR data across three distinct crop sites.  
-- **Focus**: **Site 1 is the primary focus**, and **Site 2 and 3 are supplementary**.  
+- **Duration**: July 2–31, 2025  
+- **Location**: NDSU Experimental Field, Fargo, ND
+- **Objective**: Capture time-aligned RGB-D, LiDAR, and IMU data across three crop sites under realistic outdoor conditions
+- **Focus Sites**: 
+  - **Site 1**: Primary canola site, with repeated daily captures across growth stages and lighting variations
+  - **Site 2**: Flax trial site with structural variability from differing weed control strategies
+  - **Site 3**: Canola genotype trial with 44 varieties for morphological diversity
 
 </td>
 <td width="35%">
