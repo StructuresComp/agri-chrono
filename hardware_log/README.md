@@ -3,6 +3,7 @@
 <table>
 <tr>
 <td width="50%" valign="top">
+
 Our robotic platform is purpose-built for long-term deployment in real outdoor farmland environments.
 
 It is engineered to withstand prolonged sun exposure, fluctuating weather, and uneven terrain, enabling stable integration of multiple sensors under field conditions.
