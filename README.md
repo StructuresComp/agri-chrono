@@ -2,19 +2,21 @@
 
 ## 1. Overview
 
-<div style="display: flex; align-items: flex-start; justify-content: space-between;">
-  <div style="width: 70%;">
-    <ul>
-      <li><strong>Project Duration</strong>: July 2–31, 2025</li>
-      <li><strong>Location</strong>: NDSU Experimental Field</li>
-      <li><strong>Objective</strong>: Capture time-aligned RGB-D + LiDAR data across three distinct crop sites.</li>
-      <li><strong>Focus</strong>: <strong>Site 1 is the primary focus</strong>, and <strong>Site 2 and 3 are supplementary</strong>.</li>
-    </ul>
-  </div>
-  <div style="width: 25%;">
-    <img src="./assets/Figure_1.png" alt="Overview Image" style="width: 100%;" />
-  </div>
-</div>
+<table>
+  <tr>
+    <td style="vertical-align: top; width: 70%;">
+      <ul>
+        <li><strong>Project Duration</strong>: July 2–31, 2025</li>
+        <li><strong>Location</strong>: NDSU Experimental Field</li>
+        <li><strong>Objective</strong>: Capture time-aligned RGB-D + LiDAR data across three distinct crop sites.</li>
+        <li><strong>Focus</strong>: <strong>Site 1 is the primary focus</strong>, and <strong>Site 2 and 3 are supplementary</strong>.</li>
+      </ul>
+    </td>
+    <td style="vertical-align: top; width: 30%;">
+      <img src="./assets/Figure_1.png" alt="Overview Image" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
