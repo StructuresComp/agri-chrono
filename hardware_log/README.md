@@ -1,6 +1,22 @@
-# 🌾 3D-Farm-Reconstruction Hardware Overview
+# 🔧 Hardware Overview
 
-This repository documents the full hardware stack used for **RGB-D data collection**, **3D reconstruction**, and **autonomous navigation** in real farm environments.
+<table>
+<tr>
+<td width="50%" valign="top">
+Our robotic platform is purpose-built for long-term deployment in real outdoor farmland environments.<br>
+It is engineered to withstand prolonged sun exposure, fluctuating weather, and uneven terrain, enabling stable integration of multiple sensors under field conditions.<br>
+The system operated reliably for 4 consecutive weeks in summer field trials, performing four data collection sessions per day under temperatures exceeding 100°F.<br>
+This validated its durability, thermal stability, and sensing reliability for continuous RGB-D and LiDAR data acquisition under dynamic outdoor conditions.
+
+</td>
+<td width="50%">
+
+<img src="../assets/Figure_2.png" alt="Overview Image" width="100%"/>
+
+</td>
+</tr>
+</table>
+
 
 ---
 
@@ -24,12 +40,13 @@ To enable **real-time, high-resolution 3D reconstruction** and **crop-aware auto
 
 ## 🧩 System Highlights
 
-- Dual **ZED X** cameras with wide-angle stereo field-of-view
-- High-performance **Jetson AGX Orin 64GB** for on-device SLAM and logging
-- Modular power system using **DC converters and robust cabling**
-- CAN-enabled **Scout 2.0 UGV** with rugged aluminum-framed compute mount
-- Sunlight and heat mitigation using **perforated aluminum mesh + thermal shielding**
-- Remote monitoring via **OBSBOT 4K camera** and Janus WebRTC streaming
+- Dual **ZED X stereo cameras** with wide-angle RGB-D capture
+- **Livox Mid-360 LiDAR** for dense 360° 3D sensing in outdoor fields
+- Remote streaming and control using **OBSBOT 4K** + **Janus WebRTC** over **4×4 MIMO antenna**
+- High-performance **Jetson AGX Orin 64GB** for multi-sensor integration and processing
+- Modular dual-voltage **DC power system** with robust cabling
+- CAN-based control of **4WD Scout 2.0 UGV** with vibration-resistant compute mount
+- Sun and heat mitigation via perforated **thermal shielding**
 
 ---
 
