@@ -18,6 +18,8 @@
 - **Depth Accuracy**:  
   - <0.4% at 2m  
   - <7% at 20m  
+
+#### Remarks
 > ✅ *High precision depth sensing over long distances*  
 > ✅ *Polarizer option available for outdoor robustness*
 
@@ -32,12 +34,14 @@
 
 #### Specifications
 - Supports up to **4x GMSL2 inputs** (sufficient for 2x ZED X stereo cameras)
-- **Interface**: 22-pin CSI connection to Jetson AGX Orin (0.5mm pitch)
+- **Connection**: 22-pin CSI connection to Jetson AGX Orin (0.5mm pitch)
 - **Max Resolution**: 4K @ 30 FPS per input  
 - **Bandwidth**: 10 Gb/s total  
-> ✅ *Enables dual ZED X input to Jetson Orin AGX via a single high-speed CSI connection*  
-> ✅ *Powered directly through CSI—no separate power supply required*  
-> ✅ *Supports shutter sync and external trigger for time-aligned stereo capture*
+
+#### Remarks
+> ✅ *Dual-camera CSI input to Jetson via single board*  
+> ✅ *No external power needed (powered via CSI)*  
+> ✅ *Supports hardware sync and external trigger*  
 
 ---
 
@@ -48,44 +52,68 @@
 - **Purchase**: [Stereolabs](https://www.stereolabs.com/store/products/gmsl2-fakra-cables)
 
 #### Specifications
-- **Compatibility**: All ZED X and ZED Link GMSL2-based systems  
+- **Compatibility**: ZED X, ZED Link Duo
+
+#### Remarks
 > ✅ *Extends distance between ZED X cameras and Jetson Orin AGX for more flexible mounting*  
+
+---
+
+### 🌀 3D LiDAR Sensor
+
+- **Model**: Livox Mid-360  
+- **Price**: $979  
+- **Purchase**: [Livox Official](https://www.livoxtech.com/mid-360)  
+- **Status**: ✅ *Already owned*
+
+#### Specifications
+- **FOV**: 360° (horizontal), -7° ~ 52° (vertical)  
+- **Range**: 
+  - 40 m @ 10% reflectivity
+  - 70 m @ 80% reflectivity
+- **Close Proximity Blind Zone²**: 0.1m
+- **Point Rate**: 200,000 points/s (first return)
+- **Frame Rate**: 10 Hz (typical)
+- **Interface**: 100 BASE-TX Ethernet
+- **Operating Temperature**: -4°F to 131°F
+- **Power**: 9 ~ 27 V DC
+
+#### Remarks
+> ✅ *Designed for reliable data acquisition during long-term outdoor operation*
 
 ---
 
 ### 🎥 Auxiliary Streaming Camera
 
-- **Model**: OBSBOT Tiny 2 Lite 4K Webcam  
-- **Price**: $159  
-- **Purchase**: [Amazon](https://www.amazon.com/dp/B0CZ6XY78Y/)  
+- **Model**: OBSBOT Tail Air – NDI 4K Streaming Camera  
+- **Price**: $499  
+- **Purchase**: [Amazon](https://www.amazon.com/dp/B0CJLJHS3T/)  
 - **Status**: ✅ *Already owned*
 
 #### Specifications
-- **Sensor**: 1/2" CMOS  
+- **Sensor**: 1/2.8” CMOS, f/1.8  
 - **Resolution**: 4K @ 30 FPS, 1080p @ 60 FPS  
-- **Features**: AI tracking, PTZ (Pan-Tilt-Zoom), gesture control, built-in dual microphones, HDR  
-- **Interface**: USB-C (UVC-compliant, plug-and-play)
+- **Features**: AI tracking, PTZ (Pan-Tilt-Zoom), HDR, gesture control  
+- **Interface**: HDMI, USB-C, Wireless (Wi-Fi)  
 
+#### Remarks
 > ✅ *Used for real-time video streaming during field operations*  
+> ✅ *3-axis gimbal with PTZ ensures stable framing and flexible view control*  
 > ✅ *Selected because ZED SDK supports only one open thread, making simultaneous RGB-D recording and live video infeasible*  
 
 ---
 
 ### 📌 Selection Rationale
 
-This stereo camera system was designed to meet the demands of real-time, long-range depth sensing in outdoor autonomous navigation. The following factors drove the selection:
+This sensor system is optimized for long-term, multi-modal crop data collection in real outdoor field environments. It combines wide FoV stereo vision, dense LiDAR scanning, and intuitive remote monitoring.
 
-- **High-accuracy depth sensing**: The ZED X 4mm offers **<0.4% error at 2m** and stable performance up to **35m**, ensuring reliable perception in large-scale field environments.
-- **Optimized for outdoor navigation**: Precise depth is essential for interpreting crop rows, avoiding obstacles, and maintaining lane alignment over long distances.
-- **Wide and accurate FoV**: Two cameras mounted at a **130° outward angle** achieve a combined **~150° horizontal field of view**, covering a wide scene while retaining mid-range accuracy.
-- **Compact integration**: The Duo capture card connects both cameras to **Jetson AGX Orin** via a single CSI interface, with **hardware sync and no external power required**.
-- **Flexible mounting**: **0.5m GMSL2 extension cables** were purchased to allow spacing between cameras and compute, enabling adjustable stereo baselines.
-- **Remote monitoring capability**: Since the ZED SDK supports only one active thread, it cannot simultaneously handle RGB-D recording and live streaming.  
-  To address this, an **OBSBOT Tiny 2 Lite 4K webcam** was added for **real-time video transmission** during data collection, allowing **remote observation** without interfering with high-fidelity logging.
-- **Deployment readiness**: All essential components—including stereo cameras, capture card, and webcam—are **already owned**, requiring only minimal additions (cables) for full integration.
+- Dual ZED X (4mm) cameras provide high-precision RGB-D capture with a combined 150° FoV, enabling wide-area crop coverage
+- ZED Link Duo + GMSL2 extension cables enable synchronized stereo integration with flexible mounting
+- Livox Mid-360 delivers 360° LiDAR coverage with stable, outdoor-ready performance
+- OBSBOT Tail Air 4K offers low-latency streaming with a 3-axis gimbal and AI PTZ, allowing user-controlled remote monitoring
+- All components are already owned, modular, and field-proven for continuous deployment
 
-> Considering depth precision, wide coverage, real-time streaming needs, and modularity, this configuration was selected as the most practical and robust solution for RGB-D data collection in 3D reconstruction and navigation.
-
+> Designed for robust, scalable RGB-D + LiDAR capture and remote visualization across long-term agricultural field studies.
 ---
 
 ## ❌ Alternatives Considered
@@ -102,6 +130,6 @@ This stereo camera system was designed to meet the demands of real-time, long-ra
 **Cons**:
 - **Lower depth accuracy** at long range compared to the 4mm model  
 - **Not available in current inventory**  
-- Not suitable for **outdoor agricultural settings**, where the robot must perform **navigation tasks that require high-accuracy depth sensing even at long range**
+- Not suitable for **outdoor agricultural settings** requiring **long-range, high-precision depth sensing** for consistent data collection
 
 **Decision**: Rejected due to lack of long-range accuracy and unavailability. The 4mm variant was preferred for its superior **depth precision** and **readiness for immediate deployment**.

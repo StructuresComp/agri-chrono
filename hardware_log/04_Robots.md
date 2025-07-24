@@ -14,6 +14,8 @@
 - **Control Interface**: CAN, RS232/RS422, Ethernet  
 - **Power**: 24V DC battery system  
 - **Operating Time**: ~2–4 hours (depending on load)  
+
+#### Remarks
 > ✅ *UGV platform controllable via CAN interface — already owned and ready for deployment*
 
 ---
@@ -24,23 +26,8 @@
 - **Accessories**: 1" Black Plastic End Caps (25 Pack, compatible)  
 - **Status**: ✅ *Already owned*
 
+#### Remarks
 > ✅ *Sturdy and component-friendly — easy to install on the Scout 2.0 platform*
-
----
-
-### 🧊 Passive Heat Dissipation
-
-- **Material**: Perforated Aluminum Metal Sheets  
-- **Product**: [Expanded Metal Mesh Aluminum, 30"x15", 16 Gauge, 0.32" Opening](https://www.amazon.com/dp/B0DC3R4VNY)  
-- **Price**: $65.99 per unit × 2 = **$131.98**
-
-#### Specifications
-- **Material**: Aluminum  
-- **Thickness**: 16 Gauge (~1.59 mm)  
-- **Opening Size**: ~0.32 inches (≈ 8.1 mm)  
-- **Type**: Expanded metal mesh (diamond pattern)
-
-> ✅ *Side-mounted only — the perforated mesh allows airflow for effective passive cooling under direct sunlight*
 
 ---
 
@@ -56,6 +43,7 @@
 - **Max Operating Temp**: ~2000°F (≈ 1093°C) radiant / 300°F (≈ 149°C) direct contact  
 - **Backing**: High-temperature adhesive for easy mounting on flat surfaces
 
+#### Remarks
 > ✅ *To be applied on the front, top, and rear acrylic panels to block direct sunlight and reduce internal heat buildup*
 
 ---
@@ -69,6 +57,7 @@ All critical modules are mounted using custom 3D-printed brackets and housings:
 - **ZED X Cameras**
 - **OBSBOT Tiny 2**
 
+#### Remarks
 > ✅ *3D-printed parts ensure precise fit, cable management, and shock resistance for each component*
 
 ---
