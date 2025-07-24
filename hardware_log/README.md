@@ -3,9 +3,12 @@
 <table>
 <tr>
 <td width="50%" valign="top">
-Our robotic platform is purpose-built for long-term deployment in real outdoor farmland environments.<br>
-It is engineered to withstand prolonged sun exposure, fluctuating weather, and uneven terrain, enabling stable integration of multiple sensors under field conditions.<br>
-The system operated reliably for 4 consecutive weeks in summer field trials, performing four data collection sessions per day under temperatures exceeding 100°F.<br>
+Our robotic platform is purpose-built for long-term deployment in real outdoor farmland environments.
+
+It is engineered to withstand prolonged sun exposure, fluctuating weather, and uneven terrain, enabling stable integration of multiple sensors under field conditions.
+
+The system operated reliably for 4 consecutive weeks in summer field trials, performing four data collection sessions per day under temperatures exceeding 100°F.
+
 This validated its durability, thermal stability, and sensing reliability for continuous RGB-D and LiDAR data acquisition under dynamic outdoor conditions.
 
 </td>
