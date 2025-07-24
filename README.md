@@ -4,7 +4,7 @@
 
 <table>
 <tr>
-<td width="65%" valign="top">
+<td width="60%" valign="top">
 
 - **Duration**: July 2–31, 2025  
 - **Location**: NDSU Experimental Field, Fargo, ND
@@ -15,7 +15,7 @@
   - **Site 3**: Canola genotype trial with 44 varieties for morphological diversity
 
 </td>
-<td width="35%">
+<td width="40%">
 
 <img src="./assets/Figure_1.png" alt="Overview Image" width="100%"/>
 
