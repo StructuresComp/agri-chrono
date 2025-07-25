@@ -28,12 +28,25 @@
 ## 2. System Resources
 We provide detailed documentation and source code used throughout the **AgriChrono** project for hardware integration, software control, and data processing.
 
+<table>
+<tr>
+<td width="60%" valign="top">
+
 - 📄 [**Hardware Documentation**](hardware_log/README.md)  
 Describes the robot platform, sensor layout, power system, and networking for stable long-term deployment in the field.
 - ⚙️ [**Software Stack**](software_log/README.md)  
 Includes control interfaces, real-time streaming modules, and logging mechanisms used during data collection.
 - 🧪 [**Data Extraction Scripts**](data_log/README.md)  
 Codebase for extracting RGB, Depth, and LiDAR data from raw SVO and binary files into structured datasets.
+
+</td>
+<td width="40%">
+
+<img src="./assets/Figure_2.png" alt="Overview Image" width="100%"/>
+
+</td>
+</tr>
+</table>
 
 ---
 
