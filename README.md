@@ -38,6 +38,8 @@ Describes the robot platform, sensor layout, power system, and networking for st
 Includes control interfaces, real-time streaming modules, and logging mechanisms used during data collection.
 - 🧪 [**Data Extraction Scripts**](data_log/README.md)  
 Codebase for extracting RGB, Depth, and LiDAR data from raw SVO and binary files into structured datasets.
+- 💾 [**Download AgriChrono Dataset**](https://ucla.box.com/s/4hrz2mh675ack6aukwwqq2ufige5dti6)  
+Public release of the full dataset, including raw and extracted RGB-D, LiDAR, and IMU recordings collected under real-world field conditions.
 
 </td>
 <td width="40%">
