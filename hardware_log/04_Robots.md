@@ -16,7 +16,7 @@
 - **Operating Time**: ~2–4 hours (depending on load)  
 
 #### Remarks
-> ✅ *UGV platform controllable via CAN interface — already owned and ready for deployment*
+> ✅ *UGV platform controllable via CAN interface*
 
 ---
 
@@ -24,54 +24,70 @@
 
 - **Material**: 8020 Aluminum Extrusion (10 Series, 1" x 1")  
 - **Accessories**: 1" Black Plastic End Caps (25 Pack, compatible)  
+- **Usage**: Forms the 3-layer mounting structure and enables attachment of side panels for dust shielding  
 - **Status**: ✅ *Already owned*
 
 #### Remarks
-> ✅ *Sturdy and component-friendly — easy to install on the Scout 2.0 platform*
+> ✅ *Lightweight, modular, reconfigurable — supports all mounting layers and side paneling*
 
 ---
 
-### 🌞 Sunlight Protection
+### 🧩 3-Layer Component Layout
 
-- **Material**: Thermo-Tec 13585 Adhesive Heat Barrier  
-- **Price**: $63.49  
-- **Purchase**: [Amazon](https://www.amazon.com/dp/B000TXU55S)  
+The robot platform is vertically structured into three functional layers, mounted using 8020 aluminum frame:
 
-#### Specifications
-- **Type**: Adhesive-backed aluminum heat barrier  
-- **Thermal Resistance**: Reflects up to **90% of radiant heat**  
-- **Max Operating Temp**: ~2000°F (≈ 1093°C) radiant / 300°F (≈ 149°C) direct contact  
-- **Backing**: High-temperature adhesive for easy mounting on flat surfaces
+#### ▪️ Bottom Layer – Power + LiDAR
+- **Mounted Components**:
+    - DC converters (buck & boost modules)
+    - Livox Mid-360 LiDAR (mounted lowest to ensure -7° to +52° vertical FoV is unobstructed)
+
+#### ▪️ Middle Layer – Compute + Network
+- **Material**: Laser-cut acrylic board
+- **Mounted Components**:
+    - Jetson AGX Orin (with 3D-printed customized case)
+    - Network switch / 5G modem / cable routing
+
+#### ▪️ Top Layer – Sun Shield + Streaming + Antenna
+- **Material**: Acrylic board
+- **Mounted Components**:
+    - [Thermo-Tec 13585 adhesive heat barrier](https://www.amazon.com/dp/B000TXU55S) (reflects radiant sunlight)
+    - OBSBOT Tail Air 4K streaming camera
+    - MIMO antenna
+
+#### ▪️ Side + Front Panels
+- **Material**: Acrylic board
+- **Purpose**:
+    - Block excessive dust ingress from side wind
+    - Maintain ventilation while minimizing exposure
 
 #### Remarks
-> ✅ *To be applied on the front, top, and rear acrylic panels to block direct sunlight and reduce internal heat buildup*
+> ✅ Acrylic used for ease of drilling and thermal insulation
 
 ---
 
-## 🧩 Custom 3D-Printed Mounts
+### 🎥 ZED X Mounting System
 
-All critical modules are mounted using custom 3D-printed brackets and housings:
+- **Vibration Isolator**: [CAME-TV Vibration Isolator](https://www.amazon.com/dp/B09ZNWQ42Q)
+- **Pan-Tilt Base**: [INNOREL ZH7 Z Flex Tilt Head](https://www.amazon.com/dp/B0D9K7PS54/)
 
-- **Jetson AGX Orin**
-- **Power Converters**
-- **ZED X Cameras**
-- **OBSBOT Tiny 2**
-
-#### Remarks
-> ✅ *3D-printed parts ensure precise fit, cable management, and shock resistance for each component*
+#### Mounting Structure
+ZED X stereo cameras are mounted on the vibration isolator with a Z flex tilt head stacked on top. This configuration:
+- Damps high-frequency vibration from robot locomotion
+- Allows manual pitch/roll adjustments for stereo baseline alignment
+- Enables repeatable stereo configuration with lockable tilt angles
 
 ---
 
 ### 📌 Selection Rationale
 
-This robot platform was custom-designed to support real-time, multi-sensor data collection in harsh outdoor farm environments. The following factors guided the component selection:
+This robot platform was physically structured to maximize sensor performance, environmental durability, and ease of deployment in outdoor farmland settings. Key considerations:
 
-- **Field-proven UGV base**: The **AgileX Scout 2.0** offers a compact, all-terrain base with CAN control, sufficient payload capacity, and runtime for autonomous deployments.  
-- **Robust mounting system**: The use of **8020 aluminum extrusions** provides a modular and durable structure that is easy to assemble and reconfigure for various components.  
-- **Effective passive cooling**: **Perforated aluminum side panels** promote natural ventilation, helping to dissipate heat during operation under direct sunlight without fans.  
-- **Sunlight protection**: A **Thermo-Tec adhesive heat barrier** is applied to the **front, top, and rear panels** to reflect up to 90% of radiant heat, minimizing thermal buildup inside the compute housing.  
-- **Environmental durability**: All components—frame, panels, and insulation—were selected for compatibility with dust, heat, and solar exposure during prolonged outdoor use.  
-- **Precision integration**: All major modules (Jetson AGX Orin, converters, cameras) are mounted using **custom 3D-printed brackets**, ensuring secure fit, vibration resistance, and organized wiring.  
-- **Full ownership**: All required materials—including the robot base, structural frame, thermal components, and 3D-printed mounts—are **already owned**, ensuring deployment can begin without additional fabrication delays.
-
-> This configuration balances ruggedness, thermal stability, and modularity—making it ideal for mobile AI applications in large-scale agricultural environments.
+- 3-tier layout separates power, compute, and communication modules with thermal and vibration isolation
+- Lowest LiDAR placement ensures full vertical FoV (-7° to +52°) for accurate ground & canopy coverage
+- Acrylic mid/top plates simplify drilling and insulate heat, while allowing component flexibility
+- Thermal barrier on top reflects direct sunlight and protects the compute core
+- OBSBOT + antenna mounted on the highest layer for optimal line-of-sight
+- Dust-shielded side panels prevent ingress without blocking airflow
+- Custom stereo mount (Isolator + Z Tilt) mitigates jitter and supports flexible stereo geometry
+- Entire structure built from 8020 aluminum, ensuring light weight, rigidity, and modularity
+> This configuration enables robust, modular, and field-ready mounting of sensors and compute for long-term remote crop data collection in real outdoor conditions.
