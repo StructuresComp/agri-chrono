@@ -11,8 +11,8 @@
 - **Objective**: Capture time-aligned RGB-D, LiDAR, and IMU data across three crop sites under realistic outdoor conditions
 - **Focus Sites**: 
   - **Site 1**: Primary canola site, with repeated daily captures across growth stages and lighting variations
-  - **Site 2**: Flax trial site with structural variability from differing weed control strategies
-  - **Site 3**: Canola genotype trial with 44 varieties for morphological diversity
+  - **Site 2**: Canola genotype trial with 44 varieties for morphological diversity
+  - **Site 3**: Flax trial site with structural variability from differing weed control strategies
 
 </td>
 <td width="40%">
@@ -28,15 +28,13 @@
 ## 2. Field Layout
 
 <p align="center">
-  <img src="./assets/Figure_3_v3.png" alt="NDSU Experimental Field" style="width:100%;"/>
+  <img src="./assets/Figure_3_v4.png" alt="NDSU Experimental Field" style="width:100%;"/>
 </p>
 
 **Main Field Structure**:
 - `Site 1`: Regular Canola (main target crop)
-- `Site 2`: Flax Trial
-- `Site 3`: Canola Genotype Trial
-
-
+- `Site 2`: Canola Genotype Trial
+- `Site 3`: Flax Trial
 
 ---
 
@@ -57,8 +55,8 @@
 |--------|-------------------------------|------------------|----------------|------------------|
 | Site 1 | Main Canola Site              | 4                | 7              | July 2–21        |
 |        |                               | 4                | 2              | July 22–31       |
-| Site 2 | Flax Trial (Side)             | 1–2 (selected)   | 2              | July 2–31        |
-| Site 3 | Canola Genotype Trial (Side)  | 1–2 (selected)   | 2              | July 2–31        |
+| Site 2 | Canola Genotype Trial (Side)  | 1–2 (selected)   | 2              | July 2–31        |
+| Site 3 | Flax Trial (Side)             | 1–2 (selected)   | 2              | July 2–31        |
 
 ---
 
@@ -87,11 +85,19 @@
   To comprehensively record how a single canola variety appears across growth stages and varying lighting conditions.  
   *This serves as the core reference site for building a robust RGB-D dataset resilient to changes in time, illumination, and crop development.*
 
+---
 
+### 🌼 Site 2: Canola Genotype Trial Site
+- **Design**: 11 blocks, each measuring 44 ft × 3 ft
+- **Genetic Lines**: 44 different canola genotypes per block
+- **Planting Date**: May 30, 2025
+- **Objective**:  
+  To examine morphological variation across diverse canola genotypes using a large number of distributed plots.  
+  *This enables exploration of crop-level diversity essential for robust 3D modeling and perception systems.*
 
 ---
 
-### 🌿 Site 2: Flax Trial Site
+### 🌿 Site 3: Flax Trial Site
 - **Design**: 4 blocks × 4 plots = 16 total plots
 - **Plot Size**: 8 ft × 3 ft per plot
 - **Planting Date**: May 30, 2025
@@ -103,16 +109,6 @@
 - **Objective**:  
   To compare structural patterns of flax under different weed control treatments in a multi-plot setting.  
   *This trial supplements the dataset with structural diversity across crop type and site layout, supporting broader training scenarios.*
-
----
-
-### 🌼 Site 3: Canola Genotype Trial Site
-- **Design**: 11 blocks, each measuring 44 ft × 3 ft
-- **Genetic Lines**: 44 different canola genotypes per block
-- **Planting Date**: May 30, 2025
-- **Objective**:  
-  To examine morphological variation across diverse canola genotypes using a large number of distributed plots.  
-  *This enables exploration of crop-level diversity essential for robust 3D modeling and perception systems.*
 
 ---
 
