@@ -25,7 +25,19 @@
 
 ---
 
-## 2. Field Layout
+## 2. System Resources
+We provide detailed documentation and source code used throughout the **AgriChrono** project for hardware integration, software control, and data processing.
+
+- 📄 [**Hardware Documentation**](hardware_log/README.md)  
+Describes the robot platform, sensor layout, power system, and networking for stable long-term deployment in the field.
+- ⚙️ [**Software Stack**](software_log/README.md)  
+Includes control interfaces, real-time streaming modules, and logging mechanisms used during data collection.
+- 🧪 [**Data Extraction Scripts**](data_log/README.md)  
+Codebase for extracting RGB, Depth, and LiDAR data from raw SVO and binary files into structured datasets.
+
+---
+
+## 3. Field Layout
 
 <p align="center">
   <img src="./assets/Figure_3_v4.png" alt="NDSU Experimental Field" style="width:100%;"/>
@@ -38,7 +50,7 @@
 
 ---
 
-## 3. Data Collection Protocol
+## 4. Data Collection Protocol
 
 ### 📆 Collection Periods
 
@@ -72,7 +84,7 @@
 
 ---
 
-## 4. Site Descriptions
+## 5. Site Descriptions
 
 ### 🌼 Site 1: Main Canola Site
 - **Dimensions**: 50 ft (length) × 3 ft (width), 4 rows per plot with 9-inch row spacing
@@ -112,7 +124,7 @@
 
 ---
 
-## 5. Data Structure
+## 6. Data Structure
 
 ### Raw data format (`raw_data/[site]/[timestamp]/`)
 
