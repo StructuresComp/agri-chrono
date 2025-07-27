@@ -23,8 +23,6 @@
 </tr>
 </table>
 
----
-
 <td width="100%">
   <div style="display: flex; flex-direction: row; gap: 4px;">
     <img src="./assets/AgriChrono_Video.gif" alt="GIF 1" width="37.99%"/>
