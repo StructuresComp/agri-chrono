@@ -25,6 +25,16 @@
 
 ---
 
+<td width="40%">
+  <div style="display: flex; flex-direction: row; gap: 4px;">
+    <img src="./assets/AgriChrono_Video.gif" alt="GIF 1" width="38.4%"/>
+    <img src="./assets/AgriChrono_Streaming.gif" alt="GIF 2" width="36.6%"/>
+    <img src="./assets/AgriChrono_Data.gif" alt="GIF 3" width="25%"/>
+  </div>
+</td>
+
+---
+
 ## 2. System Resources
 We provide detailed documentation and source code used throughout the **AgriChrono** project for hardware integration, software control, and data processing.
 
@@ -32,11 +42,11 @@ We provide detailed documentation and source code used throughout the **AgriChro
 <tr>
 <td width="60%" valign="top">
 
-- 📄 [**Hardware Documentation**](hardware_log/README.md)  
+- 📄 [**Hardware Documentation**](hardware/README.md)  
 Describes the robot platform, sensor layout, power system, and networking for stable long-term deployment in the field.
-- ⚙️ [**Software Stack**](software_log/README.md)  
+- ⚙️ [**Software Stack**](software/README.md)  
 Includes control interfaces, real-time streaming modules, and logging mechanisms used during data collection.
-- 🧪 [**Data Extraction Scripts**](data_log/README.md)  
+- 🧪 [**Data Extraction Scripts**](data_extract/README.md)  
 Codebase for extracting RGB, Depth, and LiDAR data from raw SVO and binary files into structured datasets.
 - 💾 [**Download AgriChrono Dataset**](https://ucla.box.com/s/4hrz2mh675ack6aukwwqq2ufige5dti6)  
 Public release of the full dataset, including raw and extracted RGB-D, LiDAR, and IMU recordings collected under real-world field conditions.
