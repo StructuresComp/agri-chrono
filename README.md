@@ -25,11 +25,11 @@
 
 ---
 
-<td width="40%">
+<td width="100%">
   <div style="display: flex; flex-direction: row; gap: 4px;">
-    <img src="./assets/AgriChrono_Video.gif" alt="GIF 1" width="38.4%"/>
-    <img src="./assets/AgriChrono_Streaming.gif" alt="GIF 2" width="36.6%"/>
-    <img src="./assets/AgriChrono_Data.gif" alt="GIF 3" width="25%"/>
+    <img src="./assets/AgriChrono_Video.gif" alt="GIF 1" width="37.99%"/>
+    <img src="./assets/AgriChrono_Streaming.gif" alt="GIF 2" width="36.23%"/>
+    <img src="./assets/AgriChrono_Data.gif" alt="GIF 3" width="24.75%"/>
   </div>
 </td>
 
