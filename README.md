@@ -179,24 +179,27 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 
 ```swift
 [timestamp]/
-├── depth_npz_L/                  ← Depth (.npz) aligned to L_L
+├── depth_npz_L/                  ← Depth (.npz) aligned to L_L camera
 │   ├── 00000.npz
-├── depth_npz_R/                  ← Depth (.npz) aligned to R_L
+├── depth_npz_R/                  ← Depth (.npz) aligned to R_L camera
 │   ├── 00000.npz
 ├── depth_png_L/                  ← Depth visualization (.png), aligned to L_L
 │   ├── 00000.png
 ├── depth_png_R/                  ← Depth visualization (.png), aligned to R_L
 │   ├── 00000.png
 ├── frame_L/                      ← PNG RGB frames from left ZED X
-│   ├── L_00000.png               ← L_L camera
-│   ├── R_00000.png               ← L_R camera
+│   ├── L_00000.png               ← L_L: left sensor of left ZED X
+│   ├── R_00000.png               ← L_R: right sensor of left ZED X
 ├── frame_R/                      ← PNG RGB frames from right ZED X
-│   ├── L_00000.png               ← R_L camera
-│   ├── R_00000.png               ← R_R camera
+│   ├── L_00000.png               ← R_L: right sensor of left ZED X
+│   ├── R_00000.png               ← R_R: right sensor of left ZED X
 ├── lidar/
-│   ├── 00000.ply                 ← LiDAR point cloud for frame 0
-│   ├── lidar_info.csv            ← Per-frame IMU + timestamp for LiDAR
-├── zed_info.csv                  ← Combined IMU + timestamp info from ZED L & R
+│   ├── fov150                    ← LiDAR point clouds cropped to match ZED X stereo FoV (~150°)
+│   │   ├── 00000.ply             ← LiDAR point cloud for frame 0
+│   ├── fov360                    ← Full-range LiDAR point clouds (raw 360° FoV)
+│   │   ├── 00000.ply             
+│   ├── lidar_info.csv            ← Per-frame timestamp and IMU data from LiDAR
+├── zed_info.csv                  ← Per-frame timestamp and IMU data from ZED L and R
 ```
 
 ### CSV Format Overview
