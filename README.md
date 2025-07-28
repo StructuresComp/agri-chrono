@@ -1,4 +1,4 @@
-# AgriChrono: A Multi-modal Dataset Capturing Crop Growth and Illumination Variability via a Field Robot Platform
+# AgriChrono: A Multi-modal Dataset Capturing Crop Growth and Lighting Variability with a Field Robot
 
 ## 1. Project Overview
 
