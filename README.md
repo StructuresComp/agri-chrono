@@ -117,7 +117,6 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 | S1 (4)                     | S1 (4)<br>S2 (1)<br>S3 (1) | S1 (1) | S1 (-)                     | S1 (-)                     | S1 (-) | S1 (-) |
 | **27**                     | **28**                     | **29** | **30**                     |**31**                      |        |        |
 | S1 (-)                     | S1 (-)                     | S1 (-) | S1 (-)                     | S1 (-)                     |        |        |
-|                            |                            |        |                            |                            |        |        |
 
 ---
 
