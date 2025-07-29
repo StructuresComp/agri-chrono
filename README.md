@@ -233,3 +233,39 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 | `frame_id`      | Frame index aligned with ZED relative time        |
 | `timestamp`     | Relative timestamp (ZED-aligned)                  |
 | `accel_*`, `gyro_*` | IMU data from LiDAR at the corresponding time |
+
+---
+
+## 7. Camera Calibration Parameters
+
+### 📷 Left ZED X (4.0 mm) Camera
+- **Intrinsic Matrix** (shared by both sensors):
+```swift
+fx = 1258.97
+fy = 1258.97
+cx = 916.48
+cy = 553.83
+```
+- **Stereo Extrinsic** (Right → Left transform):
+```swift
+[ 1.000000  0.000000  0.000000  120.009026 ]
+[ 0.000000  1.000000  0.000000    0.000000 ]
+[ 0.000000  0.000000  1.000000    0.000000 ]
+[ 0.000000  0.000000  0.000000    1.000000 ]
+```
+
+### 📷 Right ZED X (4.0 mm) Camera
+- **Intrinsic Matrix** (shared by both sensors):
+```swift
+fx = 1261.83
+fy = 1261.83
+cx = 978.86
+cy = 535.06
+```
+- **Stereo Extrinsic** (Right → Left transform):
+```swift
+[ 1.000000  0.000000  0.000000  120.212349 ]
+[ 0.000000  1.000000  0.000000    0.000000 ]
+[ 0.000000  0.000000  1.000000    0.000000 ]
+[ 0.000000  0.000000  0.000000    1.000000 ]
+```
