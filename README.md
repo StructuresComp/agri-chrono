@@ -90,8 +90,8 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 |--------|-------------------------------|------------------|----------------|------------------|
 | Site 1 | Main Canola Site              | 4                | 7              | July 2–21        |
 |        |                               | 4                | 2              | July 22–31       |
-| Site 2 | Canola Genotype Trial (Side)  | 1–2 (selected)   | 2              | July 2–31        |
-| Site 3 | Flax Trial (Side)             | 1–2 (selected)   | 2              | July 2–31        |
+| Site 2 | Canola Genotype Trial (Side)  | 1                | 1–2 (selected) | July 2–31        |
+| Site 3 | Flax Trial (Side)             | 1                | 1–2 (selected) | July 2–31        |
 
 ---
 
@@ -107,7 +107,7 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 
 | Sun                        | Mon                        | Tue    | Wed                        | Thu                        | Fri    | Sat    |
 |----------------------------|----------------------------|--------|----------------------------|----------------------------|--------|--------|
-|                            |                            | **1**  | **2**                      | **3**                      | **4**  | **5**  |
+|                            |                            | **7/1**| **2**                      | **3**                      | **4**  | **5**  |
 |                            |                            |        | S1 (4)<br>S2 (1)<br>S3 (1) | S1 (3)<br>S3 (1)           | S1 (3) | S1 (2) |
 | **6**                      | **7**                      | **8**  | **9**                      | **10**                     | **11** | **12** |
 | S1 (4)                     | S1 (4)                     | S1 (4) | S1 (4)                     | S1 (3)<br>S2 (1)<br>S3 (1) | S1 (4) | S1 (4) |
@@ -115,8 +115,8 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 | S1 (4)<br>S2 (1)<br>S3 (1) | S1 (4)                     | S1 (4) | S1 (4)                     | S1 (4)<br>S2 (1)<br>S3 (1) | S1 (4) | S1 (4) |
 | **20**                     | **21**                     | **22** | **23**                     | **24**                     | **25** | **26** |
 | S1 (4)                     | S1 (4)<br>S2 (1)<br>S3 (1) | S1 (1) | S1 (-)                     | S1 (-)                     | S1 (-) | S1 (-) |
-| **27**                     | **28**                     | **29** | **30**                     |**31**                      |        |        |
-| S1 (-)                     | S1 (-)                     | S1 (-) | S1 (-)                     | S1 (-)                     |        |        |
+| **27**                     | **28**                     | **29** | **30**                     |**31**                      |**8/1** |        |
+| S1 (-)                     | S1 (-)<br>S2 (1)<br>S3 (1) | S1 (-) | S1 (-)                     | S1 (-)                     |S1 (-)<br>S2 (1)<br>S3 (1)   |        |
 
 ---
 
