@@ -19,7 +19,7 @@
 
 <img src="./assets/Figure_1.png" alt="Overview Image" width="100%"/>
 
-</td>
+</td>`
 </tr>
 </table>
 
@@ -188,7 +188,7 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 ├── [timestamp].tar.gz            ← Compressed archive of the extracted [timestamp]/ folder
 ```
 
-### Extracted session folder (`extracted_data/[site]/[timestamp]/`)
+### Extracted session folder (`extracted_data/[site]/[timestamp]/`) 
 
 ```swift
 [timestamp]/
