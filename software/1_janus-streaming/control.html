@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Control + Streaming</title>
+
+  <!-- Socket.IO (Scout & PTZ control) -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.min.js"></script> -->
+  <script src="./socket.io.min.js"></script>
+  
+  <!-- WebRTC adapter + Janus -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/8.2.3/adapter.min.js"></script> -->
+  <script src="./adapter.min.js"></script>
+  <script src="janus.js"></script> <!-- Must be located in the same directory -->
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: black;
+      color: white;
+      overflow: hidden;
+    }
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      background: black;
+    }
+    #controls {
+      position: fixed;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 1.2rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 0.5rem 0;
+      color: white;
+    }
+    #sysmon {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.4rem 1rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fullscreen Video -->
+  <video id="remotevideo" autoplay playsinline muted></video>
+
+  <!-- System Monitoring Overlay -->
+  <div id="sysmon">
+    Loading system info...
+  </div>
+
+  <!-- SVO Recording Control UI -->
+  <div id="recording-control" style="position: fixed; top: 60px; left: 50%; transform: translateX(-50%); z-index: 10; text-align: center;">
+    <input id="dirnameInput" type="text" placeholder="directory name" 
+      style="padding: 0.4rem; font-size: 1rem; width: 200px; background-color: rgba(0, 0, 0, 0.5); color: white; border: 1px solid white; border-radius: 5px;" />
+    <button onclick="startRecording()" style="margin-left: 5px;">Start</button>
+    <button onclick="stopRecording()" style="margin-left: 5px;">Stop</button>
+    <span id="recordingStatus" style="margin-left: 10px; font-size: 1.2rem;">🔴</span>
+  </div>
+
+  <!-- Controls Description (1-row) -->
+  <div id="controls">
+    <b>W/A/S/D</b>: PTZ pan/tilt &nbsp; | &nbsp;
+    <b>Z/X</b>: Zoom out/in &nbsp; | &nbsp;
+    <b>↑↓←→</b>: Move Scout &nbsp; | &nbsp;
+    <b>&lt; / &gt;</b>: Linear speed -/+ &nbsp; | &nbsp;
+    <b>[ / ]</b>: Angular speed -/+ &nbsp;
+  </div>
+
+  <script>
+    // ───── Get current host dynamically ─────
+    const host = window.location.hostname;
+    
+
+    // ───── WebSocket for PTZ + Scout control ─────
+    const socket = io(`http://${host}:5000`);
+    const keyState = {};
+
+    // Heartbeat sender: every 500ms
+    setInterval(() => {
+        socket.emit('heartbeat');
+        console.log('💓 Heartbeat sent');
+    }, 500);
+
+    window.addEventListener('blur', () => {
+        console.log('🚫 Window lost focus, clearing key state.');
+        for (const key in keyState) {
+            if (keyState[key]) {
+                keyState[key] = false;
+                socket.emit('keyup', key);
+                console.log(`⬆️ Forced keyup: ${key}`);
+            }
+        }
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (document.activeElement.tagName === "INPUT") return;
+
+      const key = e.key;
+      if (!keyState[key]) {
+        keyState[key] = true;
+        socket.emit("keydown", key);
+        console.log("⬇️ keydown:", key);
+      }
+    });
+
+    window.addEventListener("keyup", (e) => {
+      if (document.activeElement.tagName === "INPUT") return;
+
+      const key = e.key;
+      if (keyState[key]) {
+        keyState[key] = false;
+        socket.emit("keyup", key);
+        console.log("⬆️ keyup:", key);
+      }
+    });
+
+    // ───── Janus Streaming Setup (with tracks) ─────
+    let janus = null;
+    let streaming = null;
+    Janus.init({
+      debug: false,
+      callback: function () {
+        janus = new Janus({
+          server: `http://${host}:8088/janus`,
+
+          success: function () {
+            janus.attach({
+              plugin: "janus.plugin.streaming",
+              success: function (pluginHandle) {
+                console.log("✅ Plugin attached");
+                streaming = pluginHandle;
+
+                const body = { request: "watch", id: 1 };  // Set your mountpoint ID
+                streaming.send({ message: body });
+              },
+              onmessage: function (msg, jsep) {
+                if (jsep !== undefined && jsep !== null) {
+                  streaming.createAnswer({
+                    jsep: jsep,
+                    tracks: [
+                      { type: "video", recv: true, add: true }
+                    ],
+                    success: function (jsep) {
+                      const body = { request: "start" };
+                      streaming.send({ message: body, jsep: jsep });
+                      console.log("✅ WebRTC stream started");
+                    },
+                    error: function (error) {
+                      console.error("❌ WebRTC createAnswer error", error);
+                    }
+                  });
+                }
+              },
+              onremotetrack: function (track, mid, on) {
+                if (track.kind === "video" && on) {
+                  const stream = new MediaStream([track]);
+                  const video = document.getElementById("remotevideo");
+                  Janus.attachMediaStream(video, stream);
+                  video.play();
+                }
+              },
+              error: function (error) {
+                console.error("❌ Plugin attach error:", error);
+              }
+            });
+          },
+          error: function (error) {
+            console.error("❌ Janus init error:", error);
+          }
+        });
+      }
+    });
+
+    // ───── System Monitoring Reception and Safe Display ─────
+    const sysmonDiv = document.getElementById("sysmon");
+
+    socket.on("sysmon", (data) => {
+      console.log("📡 sysmon received:", data);
+      if (!data || typeof data !== "object") {
+        sysmonDiv.textContent = "⚠️ System info unavailable";
+        return;
+      }
+      
+      const cpu = data.cpu;
+      const mem = data.mem;
+      const used = data.used_gb;
+      const total = data.total_gb;
+      const usedTB = (used / 1024).toFixed(1);
+      const totalTB = (total / 1024).toFixed(1);
+      const pct = data.used_pct;
+      const linear_mps = data.linear_mps;
+      const linear_mph = data.linear_mph;
+      const wifi = data.wifi || "Unknown";
+
+      if (
+        typeof cpu !== "number" ||
+        typeof mem !== "number" ||
+        typeof used !== "number" ||
+        typeof total !== "number" ||
+        typeof pct !== "number"
+      ) {
+        sysmonDiv.textContent = "⚠️ Invalid system data";
+        return;
+      }
+
+      sysmonDiv.textContent =
+        `📶 Wi-Fi: ${wifi} | 🖥 CPU: ${cpu.toFixed(1)}% | 🗄 SSD: ${usedTB} / ${totalTB} TB | 🚗 Speed: ${linear_mps.toFixed(1)} m/s`;});
+        // `📶 Wi-Fi: ${wifi} | 🖥 CPU: ${cpu.toFixed(1)}% | 💾 MEM: ${mem.toFixed(1)}% | 🗄 SSD: ${usedTB} / ${totalTB} TB (${pct.toFixed(1)}%) | 🚗 Speed: ${linear_mps.toFixed(1)} m/s (${linear_mph.toFixed(1)} mph)`;});
+    
+    // Start SVO Recording
+    function startRecording() {
+      const dirname = document.getElementById("dirnameInput").value.trim();
+      if (!dirname) {
+        alert("⚠️ Please enter the dir name to save.");
+        return;
+      }
+      socket.emit("start_recording", dirname);
+      console.log("▶️ Recording started:", dirname);
+      document.getElementById("recordingStatus").textContent = "🟢";
+    }
+
+    function stopRecording() {
+      socket.emit("stop_recording");
+      console.log("⏹ Recording stopped");
+      document.getElementById("recordingStatus").textContent = "🔴";
+    }
+
+  </script>
+</body>
+</html>

@@ -6,7 +6,7 @@
 <tr>
 <td width="60%" valign="top">
 
-- **Duration**: July 2–31, 2025  
+- **Duration**: July 2 – August 1, 2025  
 - **Location**: NDSU Experimental Field, Fargo, ND
 - **Objective**: Capture time-aligned RGB-D, LiDAR, and IMU data across three crop sites under realistic outdoor conditions
 - **Focus Sites**: 
@@ -63,7 +63,7 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 ## 3. Field Layout
 
 <p align="center">
-  <img src="./assets/Figure_3_v4.png" alt="NDSU Experimental Field" style="width:100%;"/>
+  <img src="./assets/Figure_3.png" alt="NDSU Experimental Field" style="width:100%;"/>
 </p>
 
 **Main Field Structure**:

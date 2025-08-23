@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# Setup a trap to terminate all background processes on Ctrl+C or termination signals
+trap 'echo "🛑 Ctrl+C detected, stopping all..."; kill -9 $CAN_PID $ROS_PID $JANUS_PID $GST_PID $CTRL_PID $HTTP_PID; sudo pkill -f /opt/janus/bin/janus; exit' SIGINT SIGTERM
+
+# 1️⃣ Setup CAN interface
+echo "🚗 Setting up CAN interface..."
+sudo ip link set can0 down
+sudo ip link set can0 up type can bitrate 500000
+
+# 2️⃣ Launch Scout Base Node
+echo "🦾 Launching Scout Base Node..."
+ros2 launch scout_base scout_base.launch.py &
+ROS_PID=$!
+
+# 3️⃣ Wait a few seconds for ROS to start (optional)
+sleep 3
+
+# 4️⃣ Start Janus
+echo "🛰️  Starting Janus..."
+sudo /opt/janus/bin/janus --configs-folder=/opt/janus/etc/janus &
+JANUS_PID=$!
+
+# 5️⃣ Wait for Janus startup
+sleep 2
+
+# 6️⃣ Start GStreamer RTP streaming
+echo "🎥 Starting GStreamer..."
+gst-launch-1.0 v4l2src device=/dev/video0 ! \
+        video/x-raw,width=640,height=360,framerate=15/1 ! \
+        nvvidconv ! \
+        nvv4l2h264enc insert-sps-pps=1 bitrate=300000 ! \
+        rtph264pay config-interval=1 pt=100 ! \
+        udpsink host=127.0.0.1 port=8004 sync=false async=false &
+GST_PID=$!
+
+# 7️⃣ Start control server
+echo "🕹️  Starting control server..."
+python3 ~/AgriChrono/1_janus-streaming/control_server.py &
+CTRL_PID=$!
+
+# 8️⃣ Copy control.html
+if [ -f ~/AgriChrono/1_janus-streaming/control.html ]; then
+    echo "📄 Copying control.html to Janus html directory..."
+    sudo cp ~/AgriChrono/1_janus-streaming/control.html /opt/janus/share/janus/html/
+else
+    echo "⚠️ control.html not found! Skipping copy."
+fi
+
+# 9️⃣ Start HTTP server
+echo "🌐 Starting HTTP server..."
+cd /opt/janus/share/janus/html
+python3 -m http.server 8000 &
+HTTP_PID=$!
+
+# 🔟 Wait forever
+wait
