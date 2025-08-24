@@ -39,9 +39,9 @@ We provide detailed documentation and source code used throughout the **AgriChro
 <tr>
 <td width="60%" valign="top">
 
-📄 [**Hardware Documentation**](hardware_doc/README.md)  
+📄 [**Hardware Documentation**](hardware/README.md)  
 Describes the robot platform, sensor layout, power system, and networking for stable long-term deployment in the field.  
-⚙️ [**Software Stack**](software_stack/README.md)  
+⚙️ [**Software Stack**](software/README.md)  
 Includes control interfaces, real-time streaming modules, and logging mechanisms used during data collection.  
 📊 [**Benchmark**](benchmark/README.md)  
 Baselines and protocols for testing Gaussian Splatting on AgriChrono under lighting and growth variations.  
