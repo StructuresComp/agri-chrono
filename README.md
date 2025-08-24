@@ -80,7 +80,7 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 | Phase       | Dates             | Frequency             | Purpose                                       |
 |-------------|-------------------|-----------------------|-----------------------------------------------|
 | Phase 1     | July 2–21         | 4× daily, 7 days/week | Active growth tracking & lighting variation   |
-| Phase 2     | July 22–August 1  | 2 sessions/week       | Growth slowed toward maturity; reduced sampling frequency |
+| Phase 2     | July 22–August 1  | 2 sessions/week       | Slowed growth; less sampling                  |
 
 ---
 
