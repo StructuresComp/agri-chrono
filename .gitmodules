@@ -1,2 +1,4 @@
 [submodule "software/2_scout-ros2-control/ros2_ws/src/ugv_sdk"]
 	url = git@github.com:StructuresComp/ugv_sdk.git
+	path = software/2_scout-ros2-control/ros2_ws/src/ugv_sdk
+	branch = main
