@@ -77,10 +77,10 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 
 ### 📆 Collection Periods
 
-| Phase       | Dates           | Frequency             | Purpose                                       |
-|-------------|------------------|------------------------|-----------------------------------------------|
-| Phase 1     | July 2–21        | 4× daily, 7 days/week | Active growth tracking & lighting variation   |
-| Phase 2     | July 22–31       | 4× daily, 2 days/week | Growth slowed (near maturity), reduced need   |
+| Phase       | Dates             | Frequency             | Purpose                                       |
+|-------------|-------------------|-----------------------|-----------------------------------------------|
+| Phase 1     | July 2–21         | 4× daily, 7 days/week | Active growth tracking & lighting variation   |
+| Phase 2     | July 22–August 1  | 2 sessions/week       | Growth slowed toward maturity; reduced sampling frequency |
 
 ---
 
@@ -89,9 +89,9 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 | Site   | Description                   | Sessions per Day | Days per Week  | Period           |
 |--------|-------------------------------|------------------|----------------|------------------|
 | Site 1 | Main Canola Site              | 4                | 7              | July 2–21        |
-|        |                               | 4                | 2              | July 22–31       |
-| Site 2 | Canola Genotype Trial (Side)  | 1                | 1–2 (selected) | July 2–31        |
-| Site 3 | Flax Trial (Side)             | 1                | 1–2 (selected) | July 2–31        |
+|        |                               | 4                | 2              | July 22–August 1 |
+| Site 2 | Canola Genotype Trial (Side)  | 1                | 1–2 (selected) | July 2–August 1  |
+| Site 3 | Flax Trial (Side)             | 1                | 1–2 (selected) | July 2–August 1  |
 
 ---
 
