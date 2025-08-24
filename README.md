@@ -40,16 +40,14 @@ We provide detailed documentation and source code used throughout the **AgriChro
 <tr>
 <td width="60%" valign="top">
 
-- 📄 [**Hardware Documentation**](hardware/README.md)  
-Describes the robot platform, sensor layout, power system, and networking for stable long-term deployment in the field.
-- ⚙️ [**Software Stack**](software/README.md)  
-Includes control interfaces, real-time streaming modules, and logging mechanisms used during data collection.
-- 🧪 [**Data Extraction Scripts**](data_extract/README.md)  
-Codebase for extracting RGB, Depth, and LiDAR data from raw SVO and binary files into structured datasets.
-- 📊 [**Benchmark**](benchmark/README.md)  
-Baselines and protocols for testing Gaussian Splatting on AgriChrono under lighting and growth variations.
-- 💾 [**Download AgriChrono Dataset**](https://ucla.box.com/s/4hrz2mh675ack6aukwwqq2ufige5dti6)  
-Public release of the full dataset, including raw and extracted RGB-D, LiDAR, and IMU recordings collected under real-world field conditions.
+📄 [**Hardware Documentation**](hardware_doc/README.md)  
+Describes the robot platform, sensor layout, power system, and networking for stable long-term deployment in the field.  
+⚙️ [**Software Stack**](software_stack/README.md)  
+Includes control interfaces, real-time streaming modules, and logging mechanisms used during data collection.  
+📊 [**Benchmark**](benchmark/README.md)  
+Baselines and protocols for testing Gaussian Splatting on AgriChrono under lighting and growth variations.  
+💾 [**AgriChrono Dataset**](datasets/README.md)  
+Public release of RGB-D, LiDAR, and IMU recordings collected under real-world field conditions.  
 
 </td>
 <td width="40%">
@@ -65,7 +63,7 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 ## 3. Field Layout
 
 <p align="center">
-  <img src="./assets/Figure_3.png" alt="NDSU Experimental Field" style="width:100%;"/>
+  <img src="./assets/Figure_3.png" alt="Experimental Field" style="width:100%;"/>
 </p>
 
 **Main Field Structure**:
