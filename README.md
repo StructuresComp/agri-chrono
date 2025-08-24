@@ -46,6 +46,8 @@ Describes the robot platform, sensor layout, power system, and networking for st
 Includes control interfaces, real-time streaming modules, and logging mechanisms used during data collection.
 - 🧪 [**Data Extraction Scripts**](data_extract/README.md)  
 Codebase for extracting RGB, Depth, and LiDAR data from raw SVO and binary files into structured datasets.
+- 📊 [**Benchmark**](benchmark/README.md)  
+Baselines and protocols for testing Gaussian Splatting on AgriChrono under lighting and growth variations.
 - 💾 [**Download AgriChrono Dataset**](https://ucla.box.com/s/4hrz2mh675ack6aukwwqq2ufige5dti6)  
 Public release of the full dataset, including raw and extracted RGB-D, LiDAR, and IMU recordings collected under real-world field conditions.
 
@@ -114,9 +116,9 @@ Public release of the full dataset, including raw and extracted RGB-D, LiDAR, an
 | **13**                     | **14**                     | **15** | **16**                     | **17**                     | **18** | **19** |
 | S1 (4)<br>S2 (1)<br>S3 (1) | S1 (4)                     | S1 (4) | S1 (4)                     | S1 (4)<br>S2 (1)<br>S3 (1) | S1 (4) | S1 (4) |
 | **20**                     | **21**                     | **22** | **23**                     | **24**                     | **25** | **26** |
-| S1 (4)                     | S1 (4)<br>S2 (1)<br>S3 (1) | S1 (1) | S1 (-)                     | S1 (-)                     | S1 (-) | S1 (-) |
+| S1 (4)                     | S1 (2)<br>S2 (1)<br>S3 (1) | S1 (1) |                            | S1 (1)                     |        |        |
 | **27**                     | **28**                     | **29** | **30**                     |**31**                      |**8/1** |        |
-| S1 (-)                     | S1 (-)<br>S2 (1)<br>S3 (1) | S1 (-) | S1 (-)                     | S1 (-)                     |S1 (-)<br>S2 (1)<br>S3 (1)   |        |
+|                            | S1 (1)<br>S2 (1)<br>S3 (1) | S1 (1) | S1 (1)                     | S1 (1)                     |S1 (1)<br>S2 (1)<br>S3 (1)   |        |
 
 ---
 
