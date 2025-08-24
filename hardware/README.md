@@ -15,7 +15,7 @@ This validated its **durability**, **thermal stability**, and **sensing reliabil
 </td>
 <td width="50%">
 
-<img src="../assets/Figure_2_v2.png" alt="Overview Image" width="100%"/>
+<img src="../assets/Figure_2.png" alt="Overview Image" width="100%"/>
 
 </td>
 </tr>
@@ -58,10 +58,4 @@ To enable **long-term**, **high-frequency collection of RGB-D and LiDAR data** u
 
 ✅ Hardware fully integrated  
 🔧 Deployment-ready (tested in Fargo field trials)  
-📦 All components already owned and validated
-
----
-
-## 📬 Contact
-
-Feel free to reach out via [GitHub Issues](https://github.com/Gasso21/3D-Farm-Reconstruction/issues) for questions, suggestions, or collaboration inquiries.
+📦 All components already owned and validated d d
