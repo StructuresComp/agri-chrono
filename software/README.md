@@ -69,12 +69,13 @@ Each module is self-contained and ships with an **`.sh` auto-installer** for one
 
 | Directory | Description |
 |-----------|-------------|
-| `1_janus-streaming/` | WebRTC streaming + teleop UI (Janus, Flask, Socket.IO) |
-| `2_scout-ros2-control/` | ROS 2 CAN control (AgileX stack, patched `ugv_sdk`, gs_usb for L4T 36.4.3) |
-| `3_zed-data-tools/` | Dual ZED X RGB-D logger (`.svo2` + IMU CSV) |
-| `4_livox-data-tools/` | Livox Mid-360 LiDAR + IMU logger (SDK2 + custom recorder) |
-| `5_systemd/` | External HDD auto-transfer + rclone Box mount |
-| `6_network/` | Boot-time IP/SSID/link-speed email notifier |
+| [`1_janus-streaming/`](./1_janus-streaming) | WebRTC streaming + teleop UI (Janus, Flask, Socket.IO) |
+| [`2_scout-ros2-control/`](./2_scout-ros2-control) | ROS 2 CAN control (AgileX stack, patched `ugv_sdk`, gs_usb for L4T 36.4.3) |
+| [`3_zed-data-tools/`](./3_zed-data-tools) | Dual ZED X RGB-D logger (`.svo2` + IMU CSV) |
+| [`4_livox-data-tools/`](./4_livox-data-tools) | Livox Mid-360 LiDAR + IMU logger (SDK2 + custom recorder) |
+| [`5_systemd/`](./5_systemd) | External HDD auto-transfer + rclone Box mount |
+| [`6_network/`](./6_network) | Boot-time IP/SSID/link-speed email notifier |
+
 
 ---
 
