@@ -38,10 +38,10 @@
 <tr>
 <td width="60%" valign="top">
 
-📄 [**Hardware Documentation**](hardware/README.md)  
+🔧 [**Hardware Documentation**](hardware/README.md)  
 Robot platform, sensor layout, power system, and networking design for long-term deployment  
 
-⚙️ [**Software Stack**](software/README.md)  
+💻 [**Software Stack**](software/README.md)  
 Control interfaces, real-time streaming modules, and logging mechanisms used during collection  
 
 📊 [**Benchmark**](benchmark/README.md)  
