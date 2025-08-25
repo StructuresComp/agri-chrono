@@ -1,14 +1,14 @@
 # 💾 AgriChrono Dataset
 
 <p align="center">
-  <img src="../assets/Figure_4.png" alt="AgriChrono properties" style="width:100%;"/>
+  <img src="../assets/Figure_4.png" alt="AgriChrono Dataset Properties" style="width:100%;"/>
 </p>
 
-This repository provides access to datasets collected with the AgriChrono platform under diverse outdoor agricultural conditions.
+This section provides access to the datasets collected with the **AgriChrono platform**, covering diverse **outdoor agricultural conditions** across multiple sites, times of day, and crop growth stages.
 
 ---
 
-## 📊 Dataset Statistics
+## 1. Dataset Statistics
 
 | **Site**              | **# Sessions** | **FPS** | **Duration (s)** | **# Samples** | **Size** |
 |:----------------------|:--------------:|:-------:|:----------------:|:-------------:|:--------:|
@@ -18,12 +18,14 @@ This repository provides access to datasets collected with the AgriChrono platfo
 | **Site 3**            | 8              | 14.6    | 2,879            | 42,097        | 1.1 TB   |
 | **Total**             | **175**        | **14.3**| **51,046**       | **730,760**   | **18 TB**|
 
-Each multi-modal sample consists of **four RGB images, two depth maps, and one LiDAR scan**.  
-The dataset spans **three field sites** and captures diverse conditions across time, lighting, and crop growth.
+Each synchronized multi-modal sample contains:  
+- **4 RGB images**  
+- **2 depth maps**  
+- **1 LiDAR scan**
 
 ---
 
-## 📂 Available Downloads
+## 2. Available Downloads
 
 - 🌱 [**Samples (512×288)**](https://ucla.box.com/s/00eyzqj6btzlpmsufbg8wmgkz23813r9)  
   Downsampled subset for quick testing and reproducibility.  
@@ -34,25 +36,24 @@ The dataset spans **three field sites** and captures diverse conditions across t
 - 🖼️ [**Only RGB (Stereo)**](https://ucla.box.com/s/t77te4x3s8nkqale9k8nixe6q9nxo2ii)  
   - **Site 1**: Direction-specific (CW → right ZED only, CCW → left ZED only)  
   - **Sites 2 & 3**: Both left and right ZED sensors included  
-  - Contains **only stereo RGB images** without depth or LiDAR  
+  - Contains **only stereo RGB images**, without depth or LiDAR  
 
 - 🌾 [**Full AgriChrono Dataset**](https://ucla.box.com/s/22nonjreia1m16gw9mbjup6f538y4fvo)  
-  Complete release with RGB-D, LiDAR, and IMU recordings across all sites, times of day, and growth stages.  
+  Complete release including **RGB-D, LiDAR, and IMU recordings** across all sites, times of day, and growth stages.  
 
 ---
 
-## 📑 Sample Contents
+## 3. Sample Contents
 
-Both sample sets (512×288 and 1920×1080) contain the same **three benchmarking subsets**:
+Both **512×288** and **1920×1080** sample sets include three benchmarking subsets:
 
 1. **Field Diversity**  
    - Sites: Site 1 (CW / CCW), Site 2, Site 3  
    - Captures: July 21, 4 PM  
-   - Files: `*_RGB.mp4`, `*_Depth.mp4`, `*_Lidar.mp4`, plus compressed archives (`.tar.gz`)  
+   - Files: `*_RGB.mp4`, `*_Depth.mp4`, `*_Lidar.mp4`, plus `.tar.gz` archives  
 
 2. **Growth Span**  
-   - Weeks: Week 1 (Day 6), Week 2 (Day 13), Week 3 (Day 20)  
-   - Captures: Each at 6 AM  
+   - Weeks: Day 6, Day 13, Day 20 (captured at 6 AM)  
    - Files: `week_*_RGB.mp4`, `week_*_Depth.mp4`, `week_*_Lidar.mp4`, plus `.tar.gz` archives  
 
 3. **Lighting Variance**  
@@ -62,7 +63,7 @@ Both sample sets (512×288 and 1920×1080) contain the same **three benchmarking
 
 ---
 
-## 📌 Citation
+## 4. Citation
 
 If you use **AgriChrono** in your research, please cite:
 
