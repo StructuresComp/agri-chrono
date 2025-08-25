@@ -46,7 +46,7 @@ The dataset spans **three field sites** and captures diverse conditions across t
 Both sample sets (512×288 and 1920×1080) contain the same **three benchmarking subsets**:
 
 1. **Field Diversity**  
-   - Sites: Site 1 (two plots), Site 2, Site 3  
+   - Sites: Site 1 (CW / CCW), Site 2, Site 3  
    - Captures: July 21, 4 PM  
    - Files: `*_RGB.mp4`, `*_Depth.mp4`, `*_Lidar.mp4`, plus compressed archives (`.tar.gz`)  
 
@@ -68,9 +68,9 @@ If you use **AgriChrono** in your research, please cite:
 
 ```bibtex
 @article{AgriChrono2025,
-  title    = {AgriChrono: A Long-term Agricultural Robotics Dataset},
+  title    = {...},
   author   = {...},
   journal  = {...},
-  year     = {2025},
-  url      = {https://ucla.box.com/s/4hrz2mh675ack6aukwwqq2ufige5dti6}
+  year     = {...},
+  url      = {...}
 }

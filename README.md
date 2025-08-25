@@ -33,25 +33,27 @@
 ---
 
 ## 2. System Resources
-We provide detailed documentation and source code used throughout the **AgriChrono** project for hardware integration, software control, and data processing.
 
 <table>
 <tr>
 <td width="60%" valign="top">
 
 📄 [**Hardware Documentation**](hardware/README.md)  
-Describes the robot platform, sensor layout, power system, and networking for stable long-term deployment in the field.  
+Robot platform, sensor layout, power system, and networking design for long-term deployment  
+
 ⚙️ [**Software Stack**](software/README.md)  
-Includes control interfaces, real-time streaming modules, and logging mechanisms used during data collection.  
+Control interfaces, real-time streaming modules, and logging mechanisms used during collection  
+
 📊 [**Benchmark**](benchmark/README.md)  
-Baselines and protocols for testing Gaussian Splatting on AgriChrono under lighting and growth variations.  
+Protocols for evaluating Gaussian Splatting under lighting and growth variations  
+
 💾 [**AgriChrono Dataset**](datasets/README.md)  
-Public release of RGB-D, LiDAR, and IMU recordings collected under real-world field conditions.  
+Public release of RGB-D, LiDAR, and IMU recordings collected in real-world conditions  
 
 </td>
 <td width="40%">
 
-<img src="./assets/Figure_2.png" alt="Overview Image" width="100%"/>
+<img src="./assets/Figure_2.png" alt="System Diagram" width="100%"/>
 
 </td>
 </tr>
@@ -65,44 +67,45 @@ Public release of RGB-D, LiDAR, and IMU recordings collected under real-world fi
   <img src="./assets/Figure_3.png" alt="Experimental Field" style="width:100%;"/>
 </p>
 
-**Main Field Structure**:
-- `Site 1`: Regular Canola (main target crop)
-- `Site 2`: Canola Genotype Trial
-- `Site 3`: Flax Trial
+**Main Field Structure**  
+- `Site 1`: Regular Canola (main target crop)  
+- `Site 2`: Canola Genotype Trial  
+- `Site 3`: Flax Trial  
 
 ---
 
 ## 4. Data Collection Protocol
 
-### 📆 Collection Periods
+### 📆 Collection Phases
 
-| Phase       | Dates             | Frequency             | Purpose                                       |
-|-------------|-------------------|-----------------------|-----------------------------------------------|
-| Phase 1     | July 2–21         | 4× daily, 7 days/week | Active growth tracking & lighting variation   |
-| Phase 2     | July 22–August 1  | 2 sessions/week       | Slowed growth; less sampling                  |
+| Phase   | Dates             | Frequency             | Purpose                                     |
+|---------|-------------------|-----------------------|---------------------------------------------|
+| Phase 1 | July 2–21         | 4× daily, 7 days/week | Active growth tracking & lighting variation |
+| Phase 2 | July 22–Aug 1     | 2 sessions/week       | Slowed growth; less sampling                |
 
 ---
 
 ### 🧪 Site-wise Collection Frequency
 
-| Site   | Description                   | Sessions per Day | Days per Week  | Period           |
-|--------|-------------------------------|------------------|----------------|------------------|
-| Site 1 | Main Canola Site              | 4                | 7              | July 2–21        |
-|        |                               | 4                | 2              | July 22–August 1 |
-| Site 2 | Canola Genotype Trial (Side)  | 1                | 1–2 (selected) | July 2–August 1  |
-| Site 3 | Flax Trial (Side)             | 1                | 1–2 (selected) | July 2–August 1  |
+| Site   | Description                  | Sessions/Day | Days/Week       | Period           |
+|--------|------------------------------|--------------|-----------------|------------------|
+| Site 1 | Main Canola Site             | 4            | 7               | July 2–21        |
+|        |                              | 4            | 2               | July 22–Aug 1    |
+| Site 2 | Canola Genotype Trial (Side) | 1            | 1–2 (selected)  | July 2–Aug 1     |
+| Site 3 | Flax Trial (Side)            | 1            | 1–2 (selected)  | July 2–Aug 1     |
 
 ---
 
 ### 🛠 Field Conditions
 
-- ❌ **Rainy days**: Data collection was skipped
-- ✅ **Wet soil**: Wooden boards were used to allow UGV traversal without damaging soil/crops
-- ☀️ **Lighting Diversity**: Sampling times:
-  - 06:00 AM (sunrise)
-  - 11:00 AM (late morning / high-angle sun)
-  - 04:00 PM (late afternoon / descending sun)
-  - 09:00 PM (sunset)
+- ❌ **Rainy days**: skipped  
+- ✅ **Wet soil**: wooden boards used for UGV traversal  
+- ☀️ **Lighting Diversity**:  
+  - 06:00 (sunrise)  
+  - 11:00 (late morning)  
+  - 16:00 (afternoon)  
+  - 21:00 (sunset)  
+
 
 | Sun                        | Mon                        | Tue    | Wed                        | Thu                        | Fri    | Sat    |
 |----------------------------|----------------------------|--------|----------------------------|----------------------------|--------|--------|
@@ -122,40 +125,33 @@ Public release of RGB-D, LiDAR, and IMU recordings collected under real-world fi
 ## 5. Site Descriptions
 
 ### 🌼 Site 1: Main Canola Site
-- **Dimensions**: 50 ft (length) × 3 ft (width), 4 rows per plot with 9-inch row spacing
-- **Planting Date**: June 1, 2025
-- **Emergence Date**: June 7, 2025 (~6 days after sowing)
-- **Variety**: *InVigor L340PC* (Spring Canola Hybrid)
-- **First Flowering Date**: July 10, 2025
-- **Crop Duration**: 90–110 days
-- **Objective**:  
-  To comprehensively record how a single canola variety appears across growth stages and varying lighting conditions.  
-  *This serves as the core reference site for building a robust RGB-D dataset resilient to changes in time, illumination, and crop development.*
+- **Dimensions**: 50 ft × 3 ft, 4 rows per plot, 9-inch spacing  
+- **Planting**: June 1, 2025 → Emergence June 7  
+- **Variety**: *InVigor L340PC*  
+- **Flowering**: July 10, 2025  
+- **Crop Duration**: 90–110 days  
+- **Objective**: Provide a consistent reference for tracking temporal appearance changes of a single canola variety across growth stages and lighting conditions.  
 
 ---
 
 ### 🌼 Site 2: Canola Genotype Trial Site
-- **Design**: 11 blocks, each measuring 44 ft × 3 ft
-- **Genetic Lines**: 44 different canola genotypes per block
-- **Planting Date**: May 30, 2025
-- **Objective**:  
-  To examine morphological variation across diverse canola genotypes using a large number of distributed plots.  
-  *This enables exploration of crop-level diversity essential for robust 3D modeling and perception systems.*
+- **Design**: 11 blocks × 44 genotypes  
+- **Size**: 44 ft × 3 ft each  
+- **Planting**: May 30, 2025  
+- **Objective**: Capture morphological and structural variation by recording diverse genotypes planted in multiple distributed plots.  
 
 ---
 
 ### 🌿 Site 3: Flax Trial Site
-- **Design**: 4 blocks × 4 plots = 16 total plots
-- **Plot Size**: 8 ft × 3 ft per plot
-- **Planting Date**: May 30, 2025
-- **Variety**: *Gold ND* (Open-Pollinated Flax Cultivar)
-- **Crop Duration**: 90–120 days
-- **Weed Control Treatments**:
-  - 3 blocks sprayed with herbicide using a robot
-  - 1 block hand-weeded
-- **Objective**:  
-  To compare structural patterns of flax under different weed control treatments in a multi-plot setting.  
-  *This trial supplements the dataset with structural diversity across crop type and site layout, supporting broader training scenarios.*
+- **Design**: 4 × 4 plots = 16 plots  
+- **Size**: 8 ft × 3 ft each  
+- **Planting**: May 30, 2025  
+- **Variety**: *Gold ND*  
+- **Duration**: 90–120 days  
+- **Weed Control**:  
+  - 3 blocks herbicide-sprayed by robot  
+  - 1 block hand-weeded  
+- **Objective**: Introduce complementary structural diversity through a different crop type and plot arrangement, including weed control treatments for comparative analysis.  
 
 ---
 
@@ -214,7 +210,7 @@ Public release of RGB-D, LiDAR, and IMU recordings collected under real-world fi
 ├── zed_info.csv                  ← Per-frame timestamp and IMU data from ZED L and R
 ```
 
-### CSV Format Overview
+### CSV Format
 
 #### `zed_info.csv`
 
@@ -235,17 +231,16 @@ Public release of RGB-D, LiDAR, and IMU recordings collected under real-world fi
 
 ---
 
-## 7. Camera Calibration Parameters
+## 7. Camera Calibration
 
-### 📷 Left ZED X (4.0 mm) Camera
-- **Intrinsic Matrix** (shared by both sensors):
+### 📷 Left ZED X (4.0 mm)
+- **Intrinsic** (shared by both sensors):
 ```swift
-fx = 1258.97
-fy = 1258.97
-cx = 916.48
-cy = 553.83
+fx = 1258.97, fy = 1258.97
+cx =  916.48, cy =  553.83
+
 ```
-- **Stereo Extrinsic** (Right → Left transform):
+- **Extrinsic** (Right → Left transform):
 ```swift
 [ 1.000000  0.000000  0.000000  120.009026 ]
 [ 0.000000  1.000000  0.000000    0.000000 ]
@@ -253,15 +248,13 @@ cy = 553.83
 [ 0.000000  0.000000  0.000000    1.000000 ]
 ```
 
-### 📷 Right ZED X (4.0 mm) Camera
-- **Intrinsic Matrix** (shared by both sensors):
+### 📷 Right ZED X (4.0 mm)
+- **Intrinsic** (shared by both sensors):
 ```swift
-fx = 1261.83
-fy = 1261.83
-cx = 978.86
-cy = 535.06
+fx = 1261.83, fy = 1261.83
+cx =  978.86, cy =  535.06
 ```
-- **Stereo Extrinsic** (Right → Left transform):
+- **Extrinsic** (Right → Left transform):
 ```swift
 [ 1.000000  0.000000  0.000000  120.212349 ]
 [ 0.000000  1.000000  0.000000    0.000000 ]
