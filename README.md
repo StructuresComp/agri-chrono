@@ -1,6 +1,6 @@
 
 <p align="center">
-  <h1 align="center"><strong> AgriChrono: A Multi-modal Dataset Capturing Crop Growth <br>and Lighting Variability with a Field Robot</strong></h1>
+  <h1 align="center"><strong> AgriChrono: A Multi-modal Dataset Capturing Crop Growth and Lighting Variability with a Field Robot</strong></h1>
 </p>
 
 <p align="center">
