@@ -58,7 +58,7 @@ Two benchmark scenarios are considered:
 </p>
 
 We evaluated four baselines on **PSNR** and **SSIM**:
-- **3D-SSS**, **3D-HGS**, **3D-MCMC**, **3DGS**
+- **[3D-SSS](https://github.com/realcrane/3D-student-splatting-and-scooping?tab=readme-ov-file)**(CVPR 25 Oral) **[3D-HGS](https://github.com/lihaolin88/3DHGS)**(CVPR 25), **[3D-MCMC](https://github.com/ubc-vision/3dgs-mcmc)**(NeurIPS 24 Spotlight), **[3DGS](https://github.com/graphdeco-inria/gaussian-splatting)**(SIGGRAPH 2023)
 
 **Key takeaways**:
 - Training views: PSNR in the low 30s (much lower than typical indoor benchmarks)  
