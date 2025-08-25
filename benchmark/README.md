@@ -13,6 +13,8 @@ Unlike indoor datasets, AgriChrono includes **strong lighting changes** and **te
 <tr>
 <td width="60%" valign="top">
 
+📂 **[Download Benchmark Dataset](https://ucla.box.com/s/xemhedod23tnimcvkou6kbupay3kpue1)**  
+
 We constructed the benchmark using **60-second monocular RGB sequences** (900 frames at 15 FPS, resized to 512×288).  
 Each sequence is divided into **10 batches** of 90 frames, from which training sets are sampled at different frame rates:  
 - 15 FPS → 90 images  
@@ -25,6 +27,7 @@ Evaluation is performed on both **training views (15 FPS)** and **novel views (1
 Two benchmark scenarios are considered:  
 - **☀️ Lighting Variance**: Captures at 06:00, 11:00, 16:00, and 21:00  
 - **🌱 Growth Span**: Captures at 06:00 on Day 6, 13, and 20  
+
 
 </td>
 <td width="40%" valign="top">
