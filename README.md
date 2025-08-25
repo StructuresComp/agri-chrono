@@ -1,4 +1,22 @@
-# AgriChrono: A Multi-modal Dataset Capturing Crop Growth and Lighting Variability with a Field Robot
+
+<p align="center">
+  <h1 align="center"><strong> AgriChrono: A Multi-modal Dataset Capturing Crop Growth <br>and Lighting Variability with a Field Robot</strong></h1>
+</p>
+
+<p align="center">
+  Jaehwan Jeong<sup>1,2</sup>, Tuan-Anh Vu<sup>2</sup>, Mohammad Jony<sup>3</sup>, Shahab Ahmad<sup>3</sup>,<br>
+  Md. Mukhlesur Rahman<sup>3</sup>, Sangpil Kim<sup>1,†</sup>, and M. Khalid Jawed<sup>2,†</sup><br><br>
+  <sup>1</sup>Korea University <img src="./assets/KU.png" height="20"/>, &nbsp; 
+  <sup>2</sup>University of California, Los Angeles <img src="./assets/UCLA.png" height="20"/>, &nbsp; 
+  <sup>3</sup>North Dakota State University <img src="./assets/NDSU.jpg" height="20"/>
+</p>
+
+
+<div align="center">
+  <a href="">
+    <img src="https://img.shields.io/badge/arXiv-2412.11520-red?logo=arxiv" alt="arXiv Badge">
+  </a>
+</div>
 
 ## 1. Project Overview
 <table>
@@ -260,4 +278,16 @@ cx =  978.86, cy =  535.06
 [ 0.000000  1.000000  0.000000    0.000000 ]
 [ 0.000000  0.000000  1.000000    0.000000 ]
 [ 0.000000  0.000000  0.000000    1.000000 ]
+```
+
+---
+
+## **📜 Citation**  
+```tex
+@article{,
+  title={},
+  author={},
+  journal={},
+  year={}
+}
 ```
