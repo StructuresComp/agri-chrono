@@ -252,6 +252,8 @@ Public release of RGB-D, LiDAR, and IMU recordings collected in real-world condi
 ## 7. Camera Calibration
 
 ### 📷 Left ZED X (4.0 mm)
+- **Resolution**: 1920 × 1080 (FHD)
+
 - **Intrinsic** (shared by both sensors):
 ```swift
 fx = 1258.97, fy = 1258.97
@@ -267,6 +269,7 @@ cx =  916.48, cy =  553.83
 ```
 
 ### 📷 Right ZED X (4.0 mm)
+- **Resolution**: 1920 × 1080 (FHD)
 - **Intrinsic** (shared by both sensors):
 ```swift
 fx = 1261.83, fy = 1261.83

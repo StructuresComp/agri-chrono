@@ -48,7 +48,7 @@ Each synchronized multi-modal sample contains:
 Both **512×288** and **1920×1080** sample sets include three benchmarking subsets:
 
 1. **Field Diversity**  
-   - Sites: Site 1 (CW / CCW), Site 2, Site 3  
+   - Sites: Site 1 (*Clockwise / Counter-Clockwise*), Site 2, Site 3
    - Captures: July 21, 4 PM  
    - Files: `*_RGB.mp4`, `*_Depth.mp4`, `*_Lidar.mp4`, plus `.tar.gz` archives  
 
@@ -60,3 +60,15 @@ Both **512×288** and **1920×1080** sample sets include three benchmarking subs
    - Times: **06:00, 11:00, 16:00, 21:00**  
    - Captures: July 19, Site 1 (CCW direction)  
    - Files: `time_RGB.mp4`, `time_Depth.mp4`, `time_Lidar.mp4`, plus `.tar.gz` archives  
+   
+---
+
+## **📜 Citation**  
+```tex
+@article{,
+  title={},
+  author={},
+  journal={},
+  year={}
+}
+```

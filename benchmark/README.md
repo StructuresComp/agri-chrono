@@ -22,7 +22,7 @@ Each sequence is divided into **10 batches** of 90 frames, from which training s
 - 5 FPS → 30 images  
 - 3 FPS → 18 images  
 
-Evaluation is performed on both **training views (15 FPS)** and **novel views (10, 5, 3 FPS)**, with all camera poses estimated using **VGGT** for robustness in dynamic crop scenes.  
+Evaluation is performed on both **training views (15 FPS)** and **novel views (10, 5, 3 FPS)**, with all camera poses estimated using **[VGGT](https://github.com/facebookresearch/vggt)**(CVPR 25 Best paper) for robustness in dynamic crop scenes.  
 
 Two benchmark scenarios are considered:  
 - **☀️ Lighting Variance**: Captures at 06:00, 11:00, 16:00, and 21:00  
@@ -82,3 +82,15 @@ This benchmark provides:
 - A **realistic baseline** for outdoor 3DGS  
 - A **common testbed** for comparing Gaussian Splatting methods  
 - Insights into the **gap between controlled benchmarks and real deployment**
+
+---
+
+## **📜 Citation**  
+```tex
+@article{,
+  title={},
+  author={},
+  journal={},
+  year={}
+}
+```

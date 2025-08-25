@@ -131,3 +131,15 @@ AgriChrono/
 - **Fail-safe teleop**: browser blur/disconnect clears keys and sends zero Twist.  
 - **Network watchdogs**: boot-time IP email; easy remote access without GUI.  
 - **Hands-off data management**: plug-and-go HDD offload + Box cloud mount.
+
+---
+
+## **📜 Citation**  
+```tex
+@article{,
+  title={},
+  author={},
+  journal={},
+  year={}
+}
+```

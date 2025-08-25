@@ -78,3 +78,13 @@ This ensures stable, multi-modal data acquisition under dynamic outdoor conditio
 - Sun and heat protection for stable outdoor operation
 
 ---
+
+## **📜 Citation**  
+```tex
+@article{,
+  title={},
+  author={},
+  journal={},
+  year={}
+}
+```
