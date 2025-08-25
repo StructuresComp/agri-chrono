@@ -6,17 +6,17 @@
 <p align="center">
   Jaehwan Jeong<sup>1,2</sup>, Tuan-Anh Vu<sup>2</sup>, Mohammad Jony<sup>3</sup>, Shahab Ahmad<sup>3</sup>,<br>
   Md. Mukhlesur Rahman<sup>3</sup>, Sangpil Kim<sup>1,†</sup>, and M. Khalid Jawed<sup>2,†</sup><br><br>
-  <sup>1</sup>Korea University <img src="./assets/KU.png" height="20"/>, &nbsp; 
-  <sup>2</sup>University of California, Los Angeles <img src="./assets/UCLA.png" height="20"/>, &nbsp; 
-  <sup>3</sup>North Dakota State University <img src="./assets/NDSU.jpg" height="20"/>
+  <sup>1</sup>Korea University, &nbsp; 
+  <sup>2</sup>University of California, Los Angeles, &nbsp; 
+  <sup>3</sup>North Dakota State University
 </p>
 
 
-<div align="center">
+<!-- <div align="center">
   <a href="">
-    <img src="https://img.shields.io/badge/arXiv-2412.11520-red?logo=arxiv" alt="arXiv Badge">
+    <img src="https://img.shields.io/badge/arXiv-.-red?logo=arxiv" alt="arXiv Badge">
   </a>
-</div>
+</div> -->
 
 ## 1. Project Overview
 <table>
