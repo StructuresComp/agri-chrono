@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  Jaehwan Jeong<sup>1,2</sup>, Tuan-Anh Vu<sup>2</sup>, Mohammad Jony<sup>3</sup>, Shahab Ahmad<sup>3</sup>,<br>
+  <a href="https://gasso21.github.io">Jaehwan Jeong</a><sup>1,2</sup>, Tuan-Anh Vu<sup>2</sup>, Mohammad Jony<sup>3</sup>, Shahab Ahmad<sup>3</sup>,<br>
   Md. Mukhlesur Rahman<sup>3</sup>, Sangpil Kim<sup>1,†</sup>, and M. Khalid Jawed<sup>2,†</sup><br><br>
   <sup>1</sup>Korea University, &nbsp; 
   <sup>2</sup>University of California, Los Angeles, &nbsp; 
@@ -12,11 +12,11 @@
 </p>
 
 
-<!-- <div align="center">
-  <a href="">
-    <img src="https://img.shields.io/badge/arXiv-.-red?logo=arxiv" alt="arXiv Badge">
+<div align="center">
+  <a href="https://arxiv.org/pdf/2508.18694">
+    <img src="https://img.shields.io/badge/arXiv-2508.18694-red?logo=arxiv" alt="arXiv Badge">
   </a>
-</div> -->
+</div>
 
 ## 1. Project Overview
 <table>
