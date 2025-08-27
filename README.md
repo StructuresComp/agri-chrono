@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <a href="https://gasso21.github.io">Jaehwan Jeong</a><sup>1,2</sup>, Tuan-Anh Vu<sup>2</sup>, Mohammad Jony<sup>3</sup>, Shahab Ahmad<sup>3</sup>,<br>
+  <a href="https://gasso21.github.io">Jaehwan Jeong</a><sup>1,2</sup>, <a href="https://tuananh1007.github.io">Tuan-Anh Vu</a><sup>2</sup>, Mohammad Jony<sup>3</sup>, Shahab Ahmad<sup>3</sup>,<br>
   Md. Mukhlesur Rahman<sup>3</sup>, Sangpil Kim<sup>1,†</sup>, and M. Khalid Jawed<sup>2,†</sup><br><br>
   <sup>1</sup>Korea University, &nbsp; 
   <sup>2</sup>University of California, Los Angeles, &nbsp; 
