@@ -16,8 +16,11 @@
   <a href="https://arxiv.org/pdf/2508.18694v2">
     <img src="https://img.shields.io/badge/arXiv-2508.18694-red?logo=arxiv" alt="arXiv Badge">
   </a>
-  <a href="https://jaehwan-j.github.io/agrichrono/">
+  <a href="https://jaehwan-j.github.io/projects/agrichrono/agrichrono.html">
     <img src="https://img.shields.io/badge/Project-Page-blue?logo=website" alt="Project Page">
+  </a>
+  <a href="https://jaehwan-j.github.io/agrichrono/">
+    <img src="https://img.shields.io/badge/Benchmark-Page-orange?logo=website" alt="Benchmark Page">
   </a>
   <a href="benchmark/README.md">
     <img src="https://img.shields.io/badge/Benchmark-NVS-yellow">
