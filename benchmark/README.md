@@ -12,7 +12,7 @@ We benchmark Novel View Synthesis on AgriChrono with **15 baseline methods and A
   <img src="../assets/Figure_10.png" alt="Benchmark Colmap" style="width:100%;"/>
 </p>
 
-### 📂 **[Download Benchmark Dataset](https://ucla.box.com/s/xemhedod23tnimcvkou6kbupay3kpue1)**  
+### 📂 **[Download Benchmark Dataset](https://drive.google.com/file/d/18gW0gZdWHSTIS0FGdXu0iz006SGAkkK6/view?usp=share_link)**  
 
 ### Dataset Overview
 
