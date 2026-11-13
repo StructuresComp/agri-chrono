@@ -39,6 +39,7 @@ Each synchronized multi-modal sample contains:
 
 - 📊 [**Benchmark Dataset**](../benchmark/README.md)  
   Novel View Synthesis benchmark on AgriChrono across seven scenarios featuring lighting variance and growth span.
+
 ---
 
 ## 3. Sample Contents
@@ -64,7 +65,7 @@ Each synchronized multi-modal sample contains:
 ## **📜 Citation**  
 ```tex
 @article{jeong2025agrichrono,
-  title={AgriChrono: A Multi-modal Dataset Capturing Crop Growth and Lighting Variability with a Field Robot},
+  title={AgriChrono: A Longitudinal Dataset and Benchmark for Novel-View Synthesis of Field-Grown Crops},
   author={Jeong, Jaehwan and Vu, Tuan-Anh and Jony, Mohammad and Ahmad, Shahab and Rahman, Md. Mukhlesur and Kim, Sangpil and Jawed, M. Khalid},
   journal={arXiv preprint arXiv:2508.18694},
   year={2025},

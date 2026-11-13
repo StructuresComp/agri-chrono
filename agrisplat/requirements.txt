@@ -1,0 +1,18 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+--find-links https://data.pyg.org/whl/torch-2.5.1+cu124.html
+torch==2.5.1+cu124
+torchvision==0.20.1+cu124
+torch_scatter==2.1.2+pt25cu124
+numpy==1.26.4
+einops==0.8.2
+plyfile==1.1.3
+lpips==0.1.4
+pillow==12.2.0
+tqdm==4.70.1
+jaxtyping==0.3.7
+colorama==0.4.6
+opencv-python==4.11.0.86
+scipy==1.15.3
+nerfbaselines==1.2.12
+pytest==9.1.1
+nvidia-ml-py==13.615.71

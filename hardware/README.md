@@ -82,7 +82,7 @@ This ensures stable, multi-modal data acquisition under dynamic outdoor conditio
 ## **📜 Citation**  
 ```tex
 @article{jeong2025agrichrono,
-  title={AgriChrono: A Multi-modal Dataset Capturing Crop Growth and Lighting Variability with a Field Robot},
+  title={AgriChrono: A Longitudinal Dataset and Benchmark for Novel-View Synthesis of Field-Grown Crops},
   author={Jeong, Jaehwan and Vu, Tuan-Anh and Jony, Mohammad and Ahmad, Shahab and Rahman, Md. Mukhlesur and Kim, Sangpil and Jawed, M. Khalid},
   journal={arXiv preprint arXiv:2508.18694},
   year={2025},

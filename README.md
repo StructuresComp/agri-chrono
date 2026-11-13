@@ -1,11 +1,11 @@
 
 <p align="center">
-  <h1 align="center"><strong> AgriChrono: A Multi-modal Dataset Capturing Crop Growth and Lighting Variability with a Field Robot</strong></h1>
+  <h1 align="center"><strong> AgriChrono: A Longitudinal Dataset and Benchmark for Novel-View Synthesis of Field-Grown Crops</strong></h1>
 </p>
 
 <p align="center">
   <a href="https://jaehwan-j.github.io">Jaehwan Jeong</a><sup>1,2</sup>, <a href="https://tuananh1007.github.io">Tuan-Anh Vu</a><sup>2</sup>, Mohammad Jony<sup>3</sup>, Shahab Ahmad<sup>3</sup>,<br>
-  Md. Mukhlesur Rahman<sup>3</sup>, Sangpil Kim<sup>1,†</sup>, and M. Khalid Jawed<sup>2,†</sup><br><br>
+  Md. Mukhlesur Rahman<sup>3</sup>, Sangpil Kim<sup>1</sup>, and M. Khalid Jawed<sup>2,†</sup><br><br>
   <sup>1</sup>Korea University, &nbsp; 
   <sup>2</sup>University of California, Los Angeles, &nbsp; 
   <sup>3</sup>North Dakota State University
@@ -13,7 +13,7 @@
 
 
 <div align="center">
-  <a href="https://arxiv.org/pdf/2508.18694v2">
+  <a href="https://arxiv.org/abs/2508.18694">
     <img src="https://img.shields.io/badge/arXiv-2508.18694-red?logo=arxiv" alt="arXiv Badge">
   </a>
   <a href="https://jaehwan-j.github.io/projects/agrichrono/agrichrono.html">
@@ -80,8 +80,12 @@ Control interfaces, real-time streaming modules, and logging mechanisms used dur
 📊 [**NVS Benchmark**](benchmark/README.md)  
 Novel View Synthesis benchmark on AgriChrono across seven scenarios featuring lighting variance and growth span.
 
+🌱 [**AgriSplat**](agrisplat/README.md)  
+A 3D Gaussian Splatting method for high-fidelity, fine-detail crop reconstruction  
+
 💾 [**AgriChrono Dataset**](datasets/README.md)  
 Public release of RGB-D, LiDAR, IMU, and Pose recordings collected in real-world conditions  
+
 
 </td>
 <td width="40%">
@@ -94,7 +98,24 @@ Public release of RGB-D, LiDAR, IMU, and Pose recordings collected in real-world
 
 ---
 
-## 3. Field Layout
+## 3. AgriSplat
+
+<p align="center">
+  <img src="./assets/AgriSplat.png" alt="AgriSplat Overview" style="width:100%;"/>
+</p>
+
+**AgriSplat** is a 3D Gaussian Splatting method for **fine-detail rendering of field-grown crops**, evaluated on the AgriChrono NVS benchmark. It builds on Octree-GS and adds two components:
+
+- **Contribution-guided Anchor Reallocation (CAR)**: prunes low-contribution anchors and reinvests the freed budget into candidates ranked by gradient magnitude
+- **Asymmetric Directional Supervision (ADS)**: penalizes insufficient rendered contrast along reference image-gradient directions
+
+Averaged over the seven benchmark scenarios, AgriSplat improves the crop-region gradient-energy ratio (GER<sub>C</sub>) from 0.506 to 0.847 and the edge F-score (EdgeF<sub>C</sub>) from 0.712 to 0.797 over Octree-GS.
+
+👉 See [**AgriSplat**](agrisplat/README.md) for installation, training, and evaluation, and the [**NVS Benchmark**](benchmark/README.md) for the dataset and protocol.
+
+---
+
+## 4. Field Layout
 
 <p align="center">
   <img src="./assets/Figure_3.png" alt="Experimental Field" style="width:100%;"/>
@@ -107,7 +128,7 @@ Public release of RGB-D, LiDAR, IMU, and Pose recordings collected in real-world
 
 ---
 
-## 4. Data Collection Protocol
+## 5. Data Collection Protocol
 
 ### 📆 Collection Phases
 
@@ -155,7 +176,7 @@ Public release of RGB-D, LiDAR, IMU, and Pose recordings collected in real-world
 
 ---
 
-## 5. Site Descriptions
+## 6. Site Descriptions
 
 ### 🌼 Site 1: Main Canola Site
 - **Dimensions**: 50 ft × 3 ft, 4 rows per plot, 9-inch spacing  
@@ -188,7 +209,7 @@ Public release of RGB-D, LiDAR, IMU, and Pose recordings collected in real-world
 
 ---
 
-## 6. Data Structure
+## 7. Data Structure
 
 ### Raw data format (`raw_data/[site]/[timestamp]/`)
 
@@ -273,46 +294,16 @@ Public release of RGB-D, LiDAR, IMU, and Pose recordings collected in real-world
 
 ---
 
-## 7. Camera Calibration
+## 8. Acknowledgements
 
-### 📷 Left ZED X (4.0 mm)
-- **Resolution**: 1920 × 1080 (FHD)
-
-- **Intrinsic** (shared by both sensors):
-```swift
-fx = 1258.97, fy = 1258.97
-cx =  916.48, cy =  553.83
-
-```
-- **Extrinsic** (Right → Left transform):
-```swift
-[ 1.000000  0.000000  0.000000  120.009026 ]
-[ 0.000000  1.000000  0.000000    0.000000 ]
-[ 0.000000  0.000000  1.000000    0.000000 ]
-[ 0.000000  0.000000  0.000000    1.000000 ]
-```
-
-### 📷 Right ZED X (4.0 mm)
-- **Resolution**: 1920 × 1080 (FHD)
-- **Intrinsic** (shared by both sensors):
-```swift
-fx = 1261.83, fy = 1261.83
-cx =  978.86, cy =  535.06
-```
-- **Extrinsic** (Right → Left transform):
-```swift
-[ 1.000000  0.000000  0.000000  120.212349 ]
-[ 0.000000  1.000000  0.000000    0.000000 ]
-[ 0.000000  0.000000  1.000000    0.000000 ]
-[ 0.000000  0.000000  0.000000    1.000000 ]
-```
+This work was supported in part by the U.S. Department of Agriculture (Grant No. 2024-67021-42528 and 2022-67022-37021), the Korea Creative Content Agency (KOCCA) under Grant RS-2024-00345025, and the Institute of Information & Communications Technology Planning & Evaluation (IITP) funded by the Korean government (MSIT) under Grant No. RS-2019-II190079. This research was also supported by the AI Seoul Tech Research Support Program of the Seoul Future Foundation.
 
 ---
 
 ## **📜 Citation**  
 ```tex
 @article{jeong2025agrichrono,
-  title={AgriChrono: A Multi-modal Dataset Capturing Crop Growth and Lighting Variability with a Field Robot},
+  title={AgriChrono: A Longitudinal Dataset and Benchmark for Novel-View Synthesis of Field-Grown Crops},
   author={Jeong, Jaehwan and Vu, Tuan-Anh and Jony, Mohammad and Ahmad, Shahab and Rahman, Md. Mukhlesur and Kim, Sangpil and Jawed, M. Khalid},
   journal={arXiv preprint arXiv:2508.18694},
   year={2025},
