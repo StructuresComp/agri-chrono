@@ -37,7 +37,7 @@ Each synchronized multi-modal sample contains:
 
 - 🌾 [**Full AgriChrono Dataset (18TB)**](https://ucla.box.com/s/22nonjreia1m16gw9mbjup6f538y4fvo)  
 
-- 📊 [**Benchmark Dataset**](../benchmark/README.md)  
+- 📊 [**Benchmark Dataset (22GB)**](../benchmark/README.md)  
   Novel View Synthesis benchmark on AgriChrono across seven scenarios featuring lighting variance and growth span.
 
 ---
